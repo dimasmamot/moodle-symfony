@@ -26,13 +26,7 @@ class User
      *
      * @ORM\Column(name="nama", type="string", length=255)
      */
-    private $nama;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="hak_akses", type="integer")
-     */
+    
     private $hakAkses;
 
     /**
@@ -53,14 +47,14 @@ class User
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="date_registration", type="time")
+     * @ORM\Column(name="date_registration", type="date")
      */
     private $dateRegistration;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="date_last_logon", type="time")
+     * @ORM\Column(name="date_last_logon", type="date")
      */
     private $dateLastLogon;
 
