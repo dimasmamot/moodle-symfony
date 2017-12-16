@@ -23,11 +23,7 @@ class User implements UserInterface
      */
     private $id;
 
-<<<<<<< HEAD
     
-=======
-
->>>>>>> e0ba4e24814cd588a0691cd8bdccba010be3d32b
     /**
      * @var int
      *
@@ -95,10 +91,7 @@ class User implements UserInterface
         return $this->id;
     }
 
-<<<<<<< HEAD
     
-=======
->>>>>>> e0ba4e24814cd588a0691cd8bdccba010be3d32b
     /**
      * Set hakAkses
      *
