@@ -3,14 +3,16 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * User
  *
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
  */
-class User
+class User implements UserInterface
 {
     /**
      * @var int
@@ -21,7 +23,7 @@ class User
      */
     private $id;
 
-
+    
     /**
      * @var int
      *
@@ -33,6 +35,13 @@ class User
      * @ORM\Column(type="string", length=25, unique=true)
      */
     private $username;
+
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max=4096)
+     */
+    private $plainPassword;
+
 
     /**
      * @ORM\Column(type="string", length=64)
@@ -82,6 +91,7 @@ class User
         return $this->id;
     }
 
+    
     /**
      * Set hakAkses
      *
@@ -226,6 +236,15 @@ class User
         return $this->username;
     }
 
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    public function setPlainPassword($password)
+    {
+        $this->plainPassword = $password;
+    }
     /**
      * Set password
      *
@@ -274,6 +293,20 @@ class User
         return $this->email;
     }
 
-    
+    public function getSalt()
+    {
+        // The bcrypt algorithm doesn't require a separate salt.
+        // You *may* need a real salt if you choose a different encoder.
+        return null;
+    }
+    public function getRoles()
+    {
+        return null;
+    }
+    public function eraseCredentials()
+    {
+        return null;
+    }
+
 }
 
