@@ -48,10 +48,17 @@ Masuk ke folder moodle-symfony
 cd moodle-symfony
 ```
 
-Jalankan Composer Install
+Jalankan Composer Install & Bower
 
 ```
 composer install
+
+bower install ./vendor/sonata-project/admin-bundle/bower.json
+
+php bin/console cache:clear
+
+php bin/console assets:install
+
 ```
 
 Jalankan command ini untuk run
