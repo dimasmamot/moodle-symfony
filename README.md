@@ -68,3 +68,12 @@ php bin/console server:run
 ```
 
 Buka di http://localhost:8000
+
+### Setiap push jalankan 
+```
+composer update (atau) composer install
+
+bower install ./vendor/sonata-project/admin-bundle/bower.json
+
+php bin/console doctrine:schema:update --force
+```
