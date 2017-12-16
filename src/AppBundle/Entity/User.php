@@ -83,30 +83,6 @@ class User
     }
 
     /**
-     * Set nama
-     *
-     * @param string $nama
-     *
-     * @return User
-     */
-    public function setNama($nama)
-    {
-        $this->nama = $nama;
-    
-        return $this;
-    }
-
-    /**
-     * Get nama
-     *
-     * @return string
-     */
-    public function getNama()
-    {
-        return $this->nama;
-    }
-
-    /**
      * Set hakAkses
      *
      * @param integer $hakAkses
