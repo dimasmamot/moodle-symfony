@@ -13,7 +13,7 @@
 	*/
 	class PaketSoalAdmin extends AbstractAdmin	{
 		
-		protected function configureFormFields(FormMapper $FormMapper){
+		protected function configureFormFields(FormMapper $formMapper){
 			$formMapper->add('namaPaketSoal', 'text');
 		}
 
