@@ -59,3 +59,10 @@ services:
             tags:
                 - { name: sonata.admin, manager_type: orm, label: TblTagDetail }
             public: true
+
+    admin.user:
+        class: AppBundle\Admin\UserAdmin
+        arguments: [~, AppBundle\Entity\TblUser, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: User }
+        public: true
