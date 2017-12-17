@@ -46,3 +46,16 @@ services:
             tags:
                 - { name: sonata.admin, manager_type: orm, label: Soal }
             public: true
+    admin.tbltag:
+            class: AppBundle\Admin\TblTagAdmin
+            arguments: [~, AppBundle\Entity\TblTag, ~]
+            tags:
+                - { name: sonata.admin, manager_type: orm, label: TblTag }
+            public: true
+
+    admin.tbltagdetail:
+            class: AppBundle\Admin\TblTagDetailAdmin
+            arguments: [~, AppBundle\Entity\TblTagDetail, ~]
+            tags:
+                - { name: sonata.admin, manager_type: orm, label: TblTagDetail }
+            public: true
