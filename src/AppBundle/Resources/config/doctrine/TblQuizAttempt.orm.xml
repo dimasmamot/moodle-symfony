@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\TblQuizAttempt" table="tbl_quiz_attempt">
+    <indexes>
+      <index name="FK_REFERENCE_13" columns="ID_USER_PK"/>
+      <index name="FK_REFERENCE_14" columns="ID_QUIZ"/>
+    </indexes>
+    <id name="idQuestAttempt" type="integer" column="ID_QUEST_ATTEMPT">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dateTaken" type="date" column="DATE_TAKEN" nullable="true"/>
+    <field name="score" type="integer" column="SCORE" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="countAttempt" type="integer" column="COUNT_ATTEMPT" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <many-to-one field="idUserPk" target-entity="TblUser" fetch="LAZY">
+      <join-columns>
+        <join-column name="ID_USER_PK" referenced-column-name="ID_USER_PK"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idQuiz" target-entity="TblQuiz" fetch="LAZY">
+      <join-columns>
+        <join-column name="ID_QUIZ" referenced-column-name="ID_QUIZ"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

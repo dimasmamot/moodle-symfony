@@ -8,69 +8,42 @@ use Doctrine\ORM\Mapping as ORM;
  * Modul
  *
  * @ORM\Table(name="modul")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\ModulRepository")
+ * @ORM\Entity
  */
 class Modul
 {
     /**
-     * @var int
+     * @var integer
      *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
-    private $id;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id_dosen", type="integer")
+     * @ORM\Column(name="id_dosen", type="integer", nullable=false)
      */
     private $idDosen;
 
     /**
-     * @var int
+     * @var integer
      *
-     * @ORM\Column(name="id_mata_kuliah", type="integer")
+     * @ORM\Column(name="id_mata_kuliah", type="integer", nullable=false)
      */
     private $idMataKuliah;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="modul", type="string", length=255)
+     * @ORM\Column(name="modul", type="string", length=255, nullable=false)
      */
     private $modul;
 
-
     /**
-     * Get id
+     * @var integer
      *
-     * @return integer
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    public function getId()
-    {
-        return $this->id;
-    }
+    private $id;
 
     /**
-     * Set idDosen
-     *
-     * @param integer $idDosen
-     *
-     * @return Modul
-     */
-    public function setIdDosen($idDosen)
-    {
-        $this->idDosen = $idDosen;
-    
-        return $this;
-    }
-
-    /**
-     * Get idDosen
-     *
-     * @return integer
+     * @return int
      */
     public function getIdDosen()
     {
@@ -78,23 +51,15 @@ class Modul
     }
 
     /**
-     * Set idMataKuliah
-     *
-     * @param integer $idMataKuliah
-     *
-     * @return Modul
+     * @param int $idDosen
      */
-    public function setIdMataKuliah($idMataKuliah)
+    public function setIdDosen($idDosen)
     {
-        $this->idMataKuliah = $idMataKuliah;
-    
-        return $this;
+        $this->idDosen = $idDosen;
     }
 
     /**
-     * Get idMataKuliah
-     *
-     * @return integer
+     * @return int
      */
     public function getIdMataKuliah()
     {
@@ -102,27 +67,45 @@ class Modul
     }
 
     /**
-     * Set modul
-     *
-     * @param string $modul
-     *
-     * @return Modul
+     * @param int $idMataKuliah
      */
-    public function setModul($modul)
+    public function setIdMataKuliah($idMataKuliah)
     {
-        $this->modul = $modul;
-    
-        return $this;
+        $this->idMataKuliah = $idMataKuliah;
     }
 
     /**
-     * Get modul
-     *
      * @return string
      */
     public function getModul()
     {
         return $this->modul;
     }
+
+    /**
+     * @param string $modul
+     */
+    public function setModul($modul)
+    {
+        $this->modul = $modul;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+
 }
 

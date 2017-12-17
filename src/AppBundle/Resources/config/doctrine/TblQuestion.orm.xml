@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\TblQuestion" table="tbl_question">
+    <indexes>
+      <index name="FK_REFERENCE_29" columns="ID_USER_PK"/>
+      <index name="FK_REFERENCE_31" columns="ID_TAG"/>
+      <index name="FK_REFERENCE_32" columns="ID_QUESTION_CATEGORY"/>
+    </indexes>
+    <id name="idQuestion" type="integer" column="ID_QUESTION">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="title" type="text" column="TITLE" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="description" type="text" column="DESCRIPTION" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="createAt" type="date" column="CREATE_AT" nullable="true"/>
+    <field name="view" type="integer" column="VIEW" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="vote" type="integer" column="VOTE" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <many-to-one field="idUserPk" target-entity="TblUser" fetch="LAZY">
+      <join-columns>
+        <join-column name="ID_USER_PK" referenced-column-name="ID_USER_PK"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idTag" target-entity="TblTag" fetch="LAZY">
+      <join-columns>
+        <join-column name="ID_TAG" referenced-column-name="ID_TAG"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idQuestionCategory" target-entity="TblQuestionCategory" fetch="LAZY">
+      <join-columns>
+        <join-column name="ID_QUESTION_CATEGORY" referenced-column-name="ID_QUESTION_CATEGORY"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

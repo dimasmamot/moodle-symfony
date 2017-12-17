@@ -3,113 +3,17 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-use Symfony\Component\Security\Core\User\UserInterface;
+
 /**
  * User
  *
- * @ORM\Table(name="user")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
+ * @ORM\Table(name="user", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_8D93D649F85E0677", columns={"username"}), @ORM\UniqueConstraint(name="UNIQ_8D93D649E7927C74", columns={"email"})})
+ * @ORM\Entity
  */
-class User implements UserInterface
+class User
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
-    private $id;
-
-    
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="hak_akses", type="integer")
-     */
-    private $hakAkses;
-
-    /**
-     * @ORM\Column(type="string", length=25, unique=true)
-     */
-    private $username;
-
-    /**
-     * @Assert\NotBlank()
-     * @Assert\Length(max=4096)
-     */
-    private $plainPassword;
-
-
-    /**
-     * @ORM\Column(type="string", length=64)
-     */
-    private $password;
-
-    /**
-     * @ORM\Column(type="string", length=60, unique=true)
-     */
-    private $email;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="date_registration", type="time")
-     */
-    private $dateRegistration;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="date_last_logon", type="time")
-     */
-    private $dateLastLogon;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="first_name", type="string", length=255)
-     */
-    private $firstName;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="last_name", type="string", length=255)
-     */
-    private $lastName;
-
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    
-    /**
-     * Set hakAkses
-     *
-     * @param integer $hakAkses
-     *
-     * @return User
-     */
-    public function setHakAkses($hakAkses)
-    {
-        $this->hakAkses = $hakAkses;
-    
-        return $this;
-    }
-
-    /**
-     * Get hakAkses
-     *
-     * @return integer
+     * @return int
      */
     public function getHakAkses()
     {
@@ -117,118 +21,14 @@ class User implements UserInterface
     }
 
     /**
-     * Set dateRegistration
-     *
-     * @param \DateTime $dateRegistration
-     *
-     * @return UserDetail
+     * @param int $hakAkses
      */
-    public function setDateRegistration($dateRegistration)
+    public function setHakAkses($hakAkses)
     {
-        $this->dateRegistration = $dateRegistration;
-    
-        return $this;
+        $this->hakAkses = $hakAkses;
     }
 
     /**
-     * Get dateRegistration
-     *
-     * @return \DateTime
-     */
-    public function getDateRegistration()
-    {
-        return $this->dateRegistration;
-    }
-
-    /**
-     * Set dateLastLogon
-     *
-     * @param \DateTime $dateLastLogon
-     *
-     * @return UserDetail
-     */
-    public function setDateLastLogon($dateLastLogon)
-    {
-        $this->dateLastLogon = $dateLastLogon;
-    
-        return $this;
-    }
-
-    /**
-     * Get dateLastLogon
-     *
-     * @return \DateTime
-     */
-    public function getDateLastLogon()
-    {
-        return $this->dateLastLogon;
-    }
-
-    /**
-     * Set firstName
-     *
-     * @param string $firstName
-     *
-     * @return UserDetail
-     */
-    public function setFirstName($firstName)
-    {
-        $this->firstName = $firstName;
-    
-        return $this;
-    }
-
-    /**
-     * Get firstName
-     *
-     * @return string
-     */
-    public function getFirstName()
-    {
-        return $this->firstName;
-    }
-
-    /**
-     * Set lastName
-     *
-     * @param string $lastName
-     *
-     * @return UserDetail
-     */
-    public function setLastName($lastName)
-    {
-        $this->lastName = $lastName;
-    
-        return $this;
-    }
-
-    /**
-     * Get lastName
-     *
-     * @return string
-     */
-    public function getLastName()
-    {
-        return $this->lastName;
-    }
-
-    /**
-     * Set userName
-     *
-     * @param string $username
-     *
-     * @return UserDetail
-     */
-    public function setUserName($username)
-    {
-        $this->username = $username;
-    
-        return $this;
-    }
-
-    /**
-     * Get userName
-     *
      * @return string
      */
     public function getUsername()
@@ -236,32 +36,15 @@ class User implements UserInterface
         return $this->username;
     }
 
-    public function getPlainPassword()
-    {
-        return $this->plainPassword;
-    }
-
-    public function setPlainPassword($password)
-    {
-        $this->plainPassword = $password;
-    }
     /**
-     * Set password
-     *
-     * @param string $password
-     *
-     * @return UserDetail
+     * @param string $username
      */
-    public function setPassword($password)
+    public function setUsername($username)
     {
-        $this->password = $password;
-    
-        return $this;
+        $this->username = $username;
     }
 
     /**
-     * Get password
-     *
      * @return string
      */
     public function getPassword()
@@ -270,22 +53,14 @@ class User implements UserInterface
     }
 
     /**
-     * Set email
-     *
-     * @param string $email
-     *
-     * @return UserDetail
+     * @param string $password
      */
-    public function setEmail($email)
+    public function setPassword($password)
     {
-        $this->email = $email;
-    
-        return $this;
+        $this->password = $password;
     }
 
     /**
-     * Get email
-     *
      * @return string
      */
     public function getEmail()
@@ -293,20 +68,159 @@ class User implements UserInterface
         return $this->email;
     }
 
-    public function getSalt()
+    /**
+     * @param string $email
+     */
+    public function setEmail($email)
     {
-        // The bcrypt algorithm doesn't require a separate salt.
-        // You *may* need a real salt if you choose a different encoder.
-        return null;
+        $this->email = $email;
     }
-    public function getRoles()
+
+    /**
+     * @return \DateTime
+     */
+    public function getDateRegistration()
     {
-        return null;
+        return $this->dateRegistration;
     }
-    public function eraseCredentials()
+
+    /**
+     * @param \DateTime $dateRegistration
+     */
+    public function setDateRegistration($dateRegistration)
     {
-        return null;
+        $this->dateRegistration = $dateRegistration;
     }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDateLastLogon()
+    {
+        return $this->dateLastLogon;
+    }
+
+    /**
+     * @param \DateTime $dateLastLogon
+     */
+    public function setDateLastLogon($dateLastLogon)
+    {
+        $this->dateLastLogon = $dateLastLogon;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    /**
+     * @param string $firstName
+     */
+    public function setFirstName($firstName)
+    {
+        $this->firstName = $firstName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    /**
+     * @param string $lastName
+     */
+    public function setLastName($lastName)
+    {
+        $this->lastName = $lastName;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="hak_akses", type="integer", nullable=false)
+     */
+    private $hakAkses;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="username", type="string", length=25, nullable=false)
+     */
+    private $username;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=64, nullable=false)
+     */
+    private $password;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=60, nullable=false)
+     */
+    private $email;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_registration", type="time", nullable=false)
+     */
+    private $dateRegistration;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_last_logon", type="time", nullable=false)
+     */
+    private $dateLastLogon;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="first_name", type="string", length=255, nullable=false)
+     */
+    private $firstName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="last_name", type="string", length=255, nullable=false)
+     */
+    private $lastName;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
 
 }
 

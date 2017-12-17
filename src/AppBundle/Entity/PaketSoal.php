@@ -5,19 +5,19 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * HakAkses
+ * PaketSoal
  *
- * @ORM\Table(name="hak_akses")
+ * @ORM\Table(name="paket_soal")
  * @ORM\Entity
  */
-class HakAkses
+class PaketSoal
 {
     /**
      * @var string
      *
-     * @ORM\Column(name="hak_akses", type="string", length=255, nullable=false)
+     * @ORM\Column(name="nama_paket_soal", type="string", length=255, nullable=false)
      */
-    private $hakAkses;
+    private $namaPaketSoal;
 
     /**
      * @var integer
@@ -31,17 +31,17 @@ class HakAkses
     /**
      * @return string
      */
-    public function getHakAkses()
+    public function getNamaPaketSoal()
     {
-        return $this->hakAkses;
+        return $this->namaPaketSoal;
     }
 
     /**
-     * @param string $hakAkses
+     * @param string $namaPaketSoal
      */
-    public function setHakAkses($hakAkses)
+    public function setNamaPaketSoal($namaPaketSoal)
     {
-        $this->hakAkses = $hakAkses;
+        $this->namaPaketSoal = $namaPaketSoal;
     }
 
     /**

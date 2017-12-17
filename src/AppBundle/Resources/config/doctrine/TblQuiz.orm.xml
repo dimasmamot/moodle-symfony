@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\TblQuiz" table="tbl_quiz">
+    <indexes>
+      <index name="FK_REFERENCE_17" columns="ID_PAKET_SOAL"/>
+      <index name="FK_REFERENCE_28" columns="ID_COURSE_PK"/>
+    </indexes>
+    <id name="idQuiz" type="integer" column="ID_QUIZ">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="namaQuiz" type="string" column="NAMA_QUIZ" length="200" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="durasiQuiz" type="integer" column="DURASI_QUIZ" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="tryAttempt" type="integer" column="TRY_ATTEMPT" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <many-to-one field="idPaketSoal" target-entity="TblPaketSoal" fetch="LAZY">
+      <join-columns>
+        <join-column name="ID_PAKET_SOAL" referenced-column-name="ID_PAKET_SOAL"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idCoursePk" target-entity="TblCourse" fetch="LAZY">
+      <join-columns>
+        <join-column name="ID_COURSE_PK" referenced-column-name="ID_COURSE_PK"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

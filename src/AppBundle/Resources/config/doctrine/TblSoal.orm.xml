@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\TblSoal" table="tbl_soal">
+    <indexes>
+      <index name="FK_REFERENCE_19" columns="ID_PAKET_SOAL"/>
+    </indexes>
+    <id name="idDetailQuiz" type="integer" column="ID_DETAIL_QUIZ">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="pertanyaan" type="text" column="PERTANYAAN" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="opsiA" type="text" column="OPSI_A" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="opsiB" type="text" column="OPSI_B" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="opsiC" type="text" column="OPSI_C" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="opsiD" type="text" column="OPSI_D" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="opsiE" type="text" column="OPSI_E" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="jawaban" type="string" column="JAWABAN" length="2" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <many-to-one field="idPaketSoal" target-entity="TblPaketSoal" fetch="LAZY">
+      <join-columns>
+        <join-column name="ID_PAKET_SOAL" referenced-column-name="ID_PAKET_SOAL"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

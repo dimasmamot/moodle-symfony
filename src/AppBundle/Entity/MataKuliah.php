@@ -8,62 +8,35 @@ use Doctrine\ORM\Mapping as ORM;
  * MataKuliah
  *
  * @ORM\Table(name="mata_kuliah")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\MataKuliahRepository")
+ * @ORM\Entity
  */
 class MataKuliah
 {
     /**
-     * @var int
+     * @var integer
      *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
-    private $id;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id_dosen", type="integer")
+     * @ORM\Column(name="id_dosen", type="integer", nullable=false)
      */
     private $idDosen;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="mata_kuliah", type="string", length=255)
+     * @ORM\Column(name="mata_kuliah", type="string", length=255, nullable=false)
      */
     private $mataKuliah;
 
-
     /**
-     * Get id
+     * @var integer
      *
-     * @return integer
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    public function getId()
-    {
-        return $this->id;
-    }
+    private $id;
 
     /**
-     * Set idDosen
-     *
-     * @param integer $idDosen
-     *
-     * @return MataKuliah
-     */
-    public function setIdDosen($idDosen)
-    {
-        $this->idDosen = $idDosen;
-    
-        return $this;
-    }
-
-    /**
-     * Get idDosen
-     *
-     * @return integer
+     * @return int
      */
     public function getIdDosen()
     {
@@ -71,27 +44,45 @@ class MataKuliah
     }
 
     /**
-     * Set mataKuliah
-     *
-     * @param string $mataKuliah
-     *
-     * @return MataKuliah
+     * @param int $idDosen
      */
-    public function setMataKuliah($mataKuliah)
+    public function setIdDosen($idDosen)
     {
-        $this->mataKuliah = $mataKuliah;
-    
-        return $this;
+        $this->idDosen = $idDosen;
     }
 
     /**
-     * Get mataKuliah
-     *
      * @return string
      */
     public function getMataKuliah()
     {
         return $this->mataKuliah;
     }
+
+    /**
+     * @param string $mataKuliah
+     */
+    public function setMataKuliah($mataKuliah)
+    {
+        $this->mataKuliah = $mataKuliah;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+
 }
 

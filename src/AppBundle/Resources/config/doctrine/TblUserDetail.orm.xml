@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\TblUserDetail" table="tbl_user_detail">
+    <indexes>
+      <index name="FK_REFERENCE_26" columns="ID_USER_PK"/>
+    </indexes>
+    <id name="idUserDetail" type="integer" column="ID_USER_DETAIL">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dateRegistration" type="time" column="DATE_REGISTRATION" nullable="true"/>
+    <field name="dateLastLogon" type="time" column="DATE_LAST_LOGON" nullable="true"/>
+    <field name="fisrtName" type="string" column="FISRT_NAME" length="200" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="lastName" type="string" column="LAST_NAME" length="200" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="username" type="string" column="USERNAME" length="200" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="password" type="string" column="PASSWORD" length="200" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="email" type="string" column="EMAIL" length="200" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <many-to-one field="idUserPk" target-entity="TblUser" fetch="LAZY">
+      <join-columns>
+        <join-column name="ID_USER_PK" referenced-column-name="ID_USER_PK"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

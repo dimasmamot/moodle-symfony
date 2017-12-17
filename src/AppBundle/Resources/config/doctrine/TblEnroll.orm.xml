@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\TblEnroll" table="tbl_enroll">
+    <indexes>
+      <index name="FK_REFERENCE_4" columns="ID_USER_PK"/>
+      <index name="FK_REFERENCE_5" columns="ID_COURSE_PK"/>
+    </indexes>
+    <id name="enrollId" type="integer" column="ENROLL_ID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="enrollDate" type="date" column="ENROLL_DATE" nullable="true"/>
+    <field name="endDate" type="date" column="END_DATE" nullable="true"/>
+    <field name="status" type="string" column="STATUS" length="200" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <many-to-one field="idUserPk" target-entity="TblUser" fetch="LAZY">
+      <join-columns>
+        <join-column name="ID_USER_PK" referenced-column-name="ID_USER_PK"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idCoursePk" target-entity="TblCourse" fetch="LAZY">
+      <join-columns>
+        <join-column name="ID_COURSE_PK" referenced-column-name="ID_COURSE_PK"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>
