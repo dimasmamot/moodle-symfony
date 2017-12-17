@@ -39,3 +39,10 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, label: PaketSoal }
         public: true
+
+    admin.soal:
+            class: AppBundle\Admin\SoalAdmin
+            arguments: [~, AppBundle\Entity\soal, ~]
+            tags:
+                - { name: sonata.admin, manager_type: orm, label: Soal }
+            public: true

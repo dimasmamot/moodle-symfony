@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5811eb0ceaddddb38c0178ab5481ba2b",
+    "content-hash": "9f0f08d9933a109492bdcba7aee692d7",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -2084,16 +2084,16 @@
         },
         {
             "name": "sonata-project/doctrine-orm-admin-bundle",
-            "version": "3.2.0",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle.git",
-                "reference": "230d4e8c26d4dbddb72d6cccff1838652584ff04"
+                "reference": "10bde03cba06ea46d20f711303a4fc030775ce7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/230d4e8c26d4dbddb72d6cccff1838652584ff04",
-                "reference": "230d4e8c26d4dbddb72d6cccff1838652584ff04",
+                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/10bde03cba06ea46d20f711303a4fc030775ce7f",
+                "reference": "10bde03cba06ea46d20f711303a4fc030775ce7f",
                 "shasum": ""
             },
             "require": {
@@ -2118,7 +2118,6 @@
             "require-dev": {
                 "knplabs/knp-menu-bundle": "^2.1.1",
                 "simplethings/entity-audit-bundle": "0.1 - 0.9 || ^1.0",
-                "sllh/php-cs-fixer-styleci-bridge": "^2.0",
                 "symfony/phpunit-bridge": "^3.3 || ^4.0"
             },
             "suggest": {
@@ -2159,7 +2158,7 @@
                 "generator",
                 "sonata"
             ],
-            "time": "2017-11-30T10:56:11+00:00"
+            "time": "2017-12-16T18:32:28+00:00"
         },
         {
             "name": "sonata-project/exporter",

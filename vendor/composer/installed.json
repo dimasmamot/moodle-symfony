@@ -2434,257 +2434,6 @@
         "homepage": "https://symfony.com"
     },
     {
-        "name": "twig/extensions",
-        "version": "v1.5.1",
-        "version_normalized": "1.5.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/twigphp/Twig-extensions.git",
-            "reference": "d188c76168b853481cc75879ea045bf93d718e9c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/twigphp/Twig-extensions/zipball/d188c76168b853481cc75879ea045bf93d718e9c",
-            "reference": "d188c76168b853481cc75879ea045bf93d718e9c",
-            "shasum": ""
-        },
-        "require": {
-            "twig/twig": "~1.27|~2.0"
-        },
-        "require-dev": {
-            "symfony/phpunit-bridge": "~3.3@dev",
-            "symfony/translation": "~2.3|~3.0"
-        },
-        "suggest": {
-            "symfony/translation": "Allow the time_diff output to be translated"
-        },
-        "time": "2017-06-08T18:19:53+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.5-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Twig_Extensions_": "lib/"
-            },
-            "psr-4": {
-                "Twig\\Extensions\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            }
-        ],
-        "description": "Common additional features for Twig that do not directly belong in core",
-        "homepage": "http://twig.sensiolabs.org/doc/extensions/index.html",
-        "keywords": [
-            "i18n",
-            "text"
-        ]
-    },
-    {
-        "name": "symfony/security-acl",
-        "version": "v3.0.0",
-        "version_normalized": "3.0.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/security-acl.git",
-            "reference": "053b49bf4aa333a392c83296855989bcf88ddad1"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/security-acl/zipball/053b49bf4aa333a392c83296855989bcf88ddad1",
-            "reference": "053b49bf4aa333a392c83296855989bcf88ddad1",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.5.9",
-            "symfony/security-core": "~2.8|~3.0"
-        },
-        "require-dev": {
-            "doctrine/common": "~2.2",
-            "doctrine/dbal": "~2.2",
-            "psr/log": "~1.0",
-            "symfony/phpunit-bridge": "~2.8|~3.0"
-        },
-        "suggest": {
-            "doctrine/dbal": "For using the built-in ACL implementation",
-            "symfony/class-loader": "For using the ACL generateSql script",
-            "symfony/finder": "For using the ACL generateSql script"
-        },
-        "time": "2015-12-28T09:39:46+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\Security\\Acl\\": ""
-            },
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony Security Component - ACL (Access Control List)",
-        "homepage": "https://symfony.com"
-    },
-    {
-        "name": "sonata-project/exporter",
-        "version": "1.8.0",
-        "version_normalized": "1.8.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/sonata-project/exporter.git",
-            "reference": "f8bc03c2da72deeafd5d27f7cb558faeef8620d9"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/sonata-project/exporter/zipball/f8bc03c2da72deeafd5d27f7cb558faeef8620d9",
-            "reference": "f8bc03c2da72deeafd5d27f7cb558faeef8620d9",
-            "shasum": ""
-        },
-        "require": {
-            "php": "^5.6 || ^7.0"
-        },
-        "require-dev": {
-            "doctrine/dbal": "^2.2",
-            "matthiasnoback/symfony-config-test": "^2.0",
-            "matthiasnoback/symfony-dependency-injection-test": "^1.0",
-            "propel/propel1": "^1.6",
-            "sllh/php-cs-fixer-styleci-bridge": "^2.0",
-            "symfony/dependency-injection": "^2.8 || ^3.2 || ^4.0",
-            "symfony/http-foundation": "^2.8 || ^3.2 || ^4.0",
-            "symfony/http-kernel": "^2.8 || ^3.2 || ^4.0",
-            "symfony/phpunit-bridge": "^3.3 || ^4.0",
-            "symfony/property-access": "^2.8 || ^3.2 || ^4.0",
-            "symfony/routing": "^2.8 || ^3.2 || ^4.0"
-        },
-        "suggest": {
-            "ext-curl": "*",
-            "propel/propel1": "^1.6",
-            "symfony/property-access": "^2.3 || ^3.0 || ^4.0",
-            "symfony/routing": "^2.3 || ^3.0 || ^4.0"
-        },
-        "time": "2017-11-30T13:30:20+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Exporter\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Thomas Rabaix",
-                "email": "thomas.rabaix@gmail.com",
-                "homepage": "https://sonata-project.org/"
-            }
-        ],
-        "description": "Lightweight Exporter library",
-        "homepage": "https://github.com/sonata-project/Exporter",
-        "keywords": [
-            "client",
-            "csv",
-            "data",
-            "export",
-            "xls"
-        ]
-    },
-    {
-        "name": "sonata-project/datagrid-bundle",
-        "version": "2.3.1",
-        "version_normalized": "2.3.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/sonata-project/SonataDatagridBundle.git",
-            "reference": "4e53da7f3a027eee10f1f2bf37237b2b7cffaa71"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/sonata-project/SonataDatagridBundle/zipball/4e53da7f3a027eee10f1f2bf37237b2b7cffaa71",
-            "reference": "4e53da7f3a027eee10f1f2bf37237b2b7cffaa71",
-            "shasum": ""
-        },
-        "require": {
-            "php": "^5.6 || ^7.0",
-            "symfony/dependency-injection": "^2.8 || ^3.2 || ^4.0",
-            "symfony/form": "^2.8 || ^3.2 || ^4.0"
-        },
-        "require-dev": {
-            "doctrine/orm": "^2.4",
-            "symfony/phpunit-bridge": "^3.3"
-        },
-        "time": "2017-12-12T17:04:29+00:00",
-        "type": "symfony-bundle",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Sonata\\DatagridBundle\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Sonata Community",
-                "homepage": "https://github.com/sonata-project/SonataDatagridBundle/contributors"
-            },
-            {
-                "name": "Thomas Rabaix",
-                "email": "thomas.rabaix@sonata-project.org",
-                "homepage": "https://sonata-project.org"
-            }
-        ],
-        "description": "Symfony SonataDatagridBundle",
-        "homepage": "https://sonata-project.org/bundles/datagrid",
-        "keywords": [
-            "datagrid",
-            "sonata"
-        ]
-    },
-    {
         "name": "cocur/slugify",
         "version": "v3.0.1",
         "version_normalized": "3.0.1.0",
@@ -2749,6 +2498,250 @@
         "keywords": [
             "slug",
             "slugify"
+        ]
+    },
+    {
+        "name": "knplabs/knp-menu",
+        "version": "2.3.0",
+        "version_normalized": "2.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/KnpLabs/KnpMenu.git",
+            "reference": "655630a1db0b72108262d1a844de3b1ba0885be5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/655630a1db0b72108262d1a844de3b1ba0885be5",
+            "reference": "655630a1db0b72108262d1a844de3b1ba0885be5",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6.0"
+        },
+        "require-dev": {
+            "psr/container": "^1.0",
+            "symfony/http-foundation": "~2.4|~3.0|^4.0",
+            "symfony/phpunit-bridge": "~3.3|^4.0",
+            "symfony/routing": "~2.3|~3.0|^4.0",
+            "twig/twig": "~1.16|~2.0"
+        },
+        "suggest": {
+            "twig/twig": "for the TwigRenderer and the integration with your templates"
+        },
+        "time": "2017-11-18T20:49:26+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Knp\\Menu\\": "src/Knp/Menu"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Christophe Coevoet",
+                "email": "stof@notk.org"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://github.com/KnpLabs/KnpMenu/contributors"
+            },
+            {
+                "name": "KnpLabs",
+                "homepage": "https://knplabs.com"
+            }
+        ],
+        "description": "An object oriented menu library",
+        "homepage": "https://knplabs.com",
+        "keywords": [
+            "menu",
+            "tree"
+        ]
+    },
+    {
+        "name": "knplabs/knp-menu-bundle",
+        "version": "v2.2.0",
+        "version_normalized": "2.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/KnpLabs/KnpMenuBundle.git",
+            "reference": "80c765d729fcc7e3fcb096ea678f62684b53cbe6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/80c765d729fcc7e3fcb096ea678f62684b53cbe6",
+            "reference": "80c765d729fcc7e3fcb096ea678f62684b53cbe6",
+            "shasum": ""
+        },
+        "require": {
+            "knplabs/knp-menu": "~2.3",
+            "php": "^5.6 || ^7",
+            "symfony/framework-bundle": "~2.7|~3.0 | ^4.0"
+        },
+        "require-dev": {
+            "symfony/expression-language": "~2.7|~3.0 | ^4.0",
+            "symfony/phpunit-bridge": "^3.3 | ^4.0",
+            "symfony/templating": "~2.7|~3.0 | ^4.0"
+        },
+        "time": "2017-11-29T11:06:44+00:00",
+        "type": "symfony-bundle",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.2.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Knp\\Bundle\\MenuBundle\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Christophe Coevoet",
+                "email": "stof@notk.org"
+            },
+            {
+                "name": "Knplabs",
+                "homepage": "http://knplabs.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://github.com/KnpLabs/KnpMenuBundle/contributors"
+            }
+        ],
+        "description": "This bundle provides an integration of the KnpMenu library",
+        "keywords": [
+            "menu"
+        ]
+    },
+    {
+        "name": "twig/extensions",
+        "version": "v1.5.1",
+        "version_normalized": "1.5.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/twigphp/Twig-extensions.git",
+            "reference": "d188c76168b853481cc75879ea045bf93d718e9c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/twigphp/Twig-extensions/zipball/d188c76168b853481cc75879ea045bf93d718e9c",
+            "reference": "d188c76168b853481cc75879ea045bf93d718e9c",
+            "shasum": ""
+        },
+        "require": {
+            "twig/twig": "~1.27|~2.0"
+        },
+        "require-dev": {
+            "symfony/phpunit-bridge": "~3.3@dev",
+            "symfony/translation": "~2.3|~3.0"
+        },
+        "suggest": {
+            "symfony/translation": "Allow the time_diff output to be translated"
+        },
+        "time": "2017-06-08T18:19:53+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.5-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Twig_Extensions_": "lib/"
+            },
+            "psr-4": {
+                "Twig\\Extensions\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            }
+        ],
+        "description": "Common additional features for Twig that do not directly belong in core",
+        "homepage": "http://twig.sensiolabs.org/doc/extensions/index.html",
+        "keywords": [
+            "i18n",
+            "text"
+        ]
+    },
+    {
+        "name": "sonata-project/datagrid-bundle",
+        "version": "2.3.1",
+        "version_normalized": "2.3.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sonata-project/SonataDatagridBundle.git",
+            "reference": "4e53da7f3a027eee10f1f2bf37237b2b7cffaa71"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/sonata-project/SonataDatagridBundle/zipball/4e53da7f3a027eee10f1f2bf37237b2b7cffaa71",
+            "reference": "4e53da7f3a027eee10f1f2bf37237b2b7cffaa71",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.6 || ^7.0",
+            "symfony/dependency-injection": "^2.8 || ^3.2 || ^4.0",
+            "symfony/form": "^2.8 || ^3.2 || ^4.0"
+        },
+        "require-dev": {
+            "doctrine/orm": "^2.4",
+            "symfony/phpunit-bridge": "^3.3"
+        },
+        "time": "2017-12-12T17:04:29+00:00",
+        "type": "symfony-bundle",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Sonata\\DatagridBundle\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Sonata Community",
+                "homepage": "https://github.com/sonata-project/SonataDatagridBundle/contributors"
+            },
+            {
+                "name": "Thomas Rabaix",
+                "email": "thomas.rabaix@sonata-project.org",
+                "homepage": "https://sonata-project.org"
+            }
+        ],
+        "description": "Symfony SonataDatagridBundle",
+        "homepage": "https://sonata-project.org/bundles/datagrid",
+        "keywords": [
+            "datagrid",
+            "sonata"
         ]
     },
     {
@@ -2977,45 +2970,50 @@
         ]
     },
     {
-        "name": "knplabs/knp-menu",
-        "version": "2.3.0",
-        "version_normalized": "2.3.0.0",
+        "name": "symfony/security-acl",
+        "version": "v3.0.0",
+        "version_normalized": "3.0.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/KnpLabs/KnpMenu.git",
-            "reference": "655630a1db0b72108262d1a844de3b1ba0885be5"
+            "url": "https://github.com/symfony/security-acl.git",
+            "reference": "053b49bf4aa333a392c83296855989bcf88ddad1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/655630a1db0b72108262d1a844de3b1ba0885be5",
-            "reference": "655630a1db0b72108262d1a844de3b1ba0885be5",
+            "url": "https://api.github.com/repos/symfony/security-acl/zipball/053b49bf4aa333a392c83296855989bcf88ddad1",
+            "reference": "053b49bf4aa333a392c83296855989bcf88ddad1",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.6.0"
+            "php": ">=5.5.9",
+            "symfony/security-core": "~2.8|~3.0"
         },
         "require-dev": {
-            "psr/container": "^1.0",
-            "symfony/http-foundation": "~2.4|~3.0|^4.0",
-            "symfony/phpunit-bridge": "~3.3|^4.0",
-            "symfony/routing": "~2.3|~3.0|^4.0",
-            "twig/twig": "~1.16|~2.0"
+            "doctrine/common": "~2.2",
+            "doctrine/dbal": "~2.2",
+            "psr/log": "~1.0",
+            "symfony/phpunit-bridge": "~2.8|~3.0"
         },
         "suggest": {
-            "twig/twig": "for the TwigRenderer and the integration with your templates"
+            "doctrine/dbal": "For using the built-in ACL implementation",
+            "symfony/class-loader": "For using the ACL generateSql script",
+            "symfony/finder": "For using the ACL generateSql script"
         },
-        "time": "2017-11-18T20:49:26+00:00",
+        "time": "2015-12-28T09:39:46+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.3-dev"
+                "dev-master": "3.0-dev"
             }
         },
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "Knp\\Menu\\": "src/Knp/Menu"
-            }
+                "Symfony\\Component\\Security\\Acl\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
@@ -3023,61 +3021,65 @@
         ],
         "authors": [
             {
-                "name": "Christophe Coevoet",
-                "email": "stof@notk.org"
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
             },
             {
                 "name": "Symfony Community",
-                "homepage": "https://github.com/KnpLabs/KnpMenu/contributors"
-            },
-            {
-                "name": "KnpLabs",
-                "homepage": "https://knplabs.com"
+                "homepage": "https://symfony.com/contributors"
             }
         ],
-        "description": "An object oriented menu library",
-        "homepage": "https://knplabs.com",
-        "keywords": [
-            "menu",
-            "tree"
-        ]
+        "description": "Symfony Security Component - ACL (Access Control List)",
+        "homepage": "https://symfony.com"
     },
     {
-        "name": "knplabs/knp-menu-bundle",
-        "version": "v2.2.0",
-        "version_normalized": "2.2.0.0",
+        "name": "sonata-project/exporter",
+        "version": "1.8.0",
+        "version_normalized": "1.8.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/KnpLabs/KnpMenuBundle.git",
-            "reference": "80c765d729fcc7e3fcb096ea678f62684b53cbe6"
+            "url": "https://github.com/sonata-project/exporter.git",
+            "reference": "f8bc03c2da72deeafd5d27f7cb558faeef8620d9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/80c765d729fcc7e3fcb096ea678f62684b53cbe6",
-            "reference": "80c765d729fcc7e3fcb096ea678f62684b53cbe6",
+            "url": "https://api.github.com/repos/sonata-project/exporter/zipball/f8bc03c2da72deeafd5d27f7cb558faeef8620d9",
+            "reference": "f8bc03c2da72deeafd5d27f7cb558faeef8620d9",
             "shasum": ""
         },
         "require": {
-            "knplabs/knp-menu": "~2.3",
-            "php": "^5.6 || ^7",
-            "symfony/framework-bundle": "~2.7|~3.0 | ^4.0"
+            "php": "^5.6 || ^7.0"
         },
         "require-dev": {
-            "symfony/expression-language": "~2.7|~3.0 | ^4.0",
-            "symfony/phpunit-bridge": "^3.3 | ^4.0",
-            "symfony/templating": "~2.7|~3.0 | ^4.0"
+            "doctrine/dbal": "^2.2",
+            "matthiasnoback/symfony-config-test": "^2.0",
+            "matthiasnoback/symfony-dependency-injection-test": "^1.0",
+            "propel/propel1": "^1.6",
+            "sllh/php-cs-fixer-styleci-bridge": "^2.0",
+            "symfony/dependency-injection": "^2.8 || ^3.2 || ^4.0",
+            "symfony/http-foundation": "^2.8 || ^3.2 || ^4.0",
+            "symfony/http-kernel": "^2.8 || ^3.2 || ^4.0",
+            "symfony/phpunit-bridge": "^3.3 || ^4.0",
+            "symfony/property-access": "^2.8 || ^3.2 || ^4.0",
+            "symfony/routing": "^2.8 || ^3.2 || ^4.0"
         },
-        "time": "2017-11-29T11:06:44+00:00",
-        "type": "symfony-bundle",
+        "suggest": {
+            "ext-curl": "*",
+            "propel/propel1": "^1.6",
+            "symfony/property-access": "^2.3 || ^3.0 || ^4.0",
+            "symfony/routing": "^2.3 || ^3.0 || ^4.0"
+        },
+        "time": "2017-11-30T13:30:20+00:00",
+        "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.2.x-dev"
+                "dev-master": "1.x-dev"
             }
         },
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "Knp\\Bundle\\MenuBundle\\": "src"
+                "Exporter\\": "src/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -3086,21 +3088,19 @@
         ],
         "authors": [
             {
-                "name": "Christophe Coevoet",
-                "email": "stof@notk.org"
-            },
-            {
-                "name": "Knplabs",
-                "homepage": "http://knplabs.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://github.com/KnpLabs/KnpMenuBundle/contributors"
+                "name": "Thomas Rabaix",
+                "email": "thomas.rabaix@gmail.com",
+                "homepage": "https://sonata-project.org/"
             }
         ],
-        "description": "This bundle provides an integration of the KnpMenu library",
+        "description": "Lightweight Exporter library",
+        "homepage": "https://github.com/sonata-project/Exporter",
         "keywords": [
-            "menu"
+            "client",
+            "csv",
+            "data",
+            "export",
+            "xls"
         ]
     },
     {
@@ -3205,17 +3205,17 @@
     },
     {
         "name": "sonata-project/doctrine-orm-admin-bundle",
-        "version": "3.2.0",
-        "version_normalized": "3.2.0.0",
+        "version": "3.3.0",
+        "version_normalized": "3.3.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle.git",
-            "reference": "230d4e8c26d4dbddb72d6cccff1838652584ff04"
+            "reference": "10bde03cba06ea46d20f711303a4fc030775ce7f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/230d4e8c26d4dbddb72d6cccff1838652584ff04",
-            "reference": "230d4e8c26d4dbddb72d6cccff1838652584ff04",
+            "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/10bde03cba06ea46d20f711303a4fc030775ce7f",
+            "reference": "10bde03cba06ea46d20f711303a4fc030775ce7f",
             "shasum": ""
         },
         "require": {
@@ -3240,13 +3240,12 @@
         "require-dev": {
             "knplabs/knp-menu-bundle": "^2.1.1",
             "simplethings/entity-audit-bundle": "0.1 - 0.9 || ^1.0",
-            "sllh/php-cs-fixer-styleci-bridge": "^2.0",
             "symfony/phpunit-bridge": "^3.3 || ^4.0"
         },
         "suggest": {
             "simplethings/entity-audit-bundle": "If you want to support for versioning of entities and their associations."
         },
-        "time": "2017-11-30T10:56:11+00:00",
+        "time": "2017-12-16T18:32:28+00:00",
         "type": "symfony-bundle",
         "extra": {
             "branch-alias": {
