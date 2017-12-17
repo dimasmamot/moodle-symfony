@@ -28,10 +28,10 @@ class SoalAdmin extends AbstractAdmin
             ->add('opsi_c', 'text')
             ->add('opsi_d', 'text')
             ->add('opsi_e', 'text')
-            /*->add('paket_soal', 'sonata_type_model', array(
-                'class' => 'AppBundle\Entity\paket_soal',
-                'property' => 'namaPaketSoal',
-            ))*/
+            ->add('id_paket_soal', 'sonata_type_model', array(
+                'class' => 'AppBundle\Entity\TblPaketSoal',
+                'property' => 'nama_paket_soal',
+            ))
             ->end()
         ;
     }

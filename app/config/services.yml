@@ -33,18 +33,18 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
-    admin.paketsoal:
+    admin.tblpaketsoal:
         class: AppBundle\Admin\PaketSoalAdmin
-        arguments: [~, AppBundle\Entity\paket_soal, ~]
+        arguments: [~, AppBundle\Entity\TblPaketSoal, ~]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: PaketSoal }
+            - { name: sonata.admin, manager_type: orm, label: TblPaketSoal }
         public: true
 
-    admin.soal:
+    admin.tblsoal:
             class: AppBundle\Admin\SoalAdmin
-            arguments: [~, AppBundle\Entity\soal, ~]
+            arguments: [~, AppBundle\Entity\TblSoal, ~]
             tags:
-                - { name: sonata.admin, manager_type: orm, label: Soal }
+                - { name: sonata.admin, manager_type: orm, label: TblSoal }
             public: true
     admin.tbltag:
             class: AppBundle\Admin\TblTagAdmin
