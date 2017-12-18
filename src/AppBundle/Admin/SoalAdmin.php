@@ -23,14 +23,14 @@ class SoalAdmin extends AbstractAdmin
             ->add('jawaban', 'text')
             ->end()
             ->with('Opsi', array('class' => 'col-md-6'))
-            ->add('opsi_a', 'text')
-            ->add('opsi_b', 'text')
-            ->add('opsi_c', 'text')
-            ->add('opsi_d', 'text')
-            ->add('opsi_e', 'text')
-            ->add('id_paket_soal', 'sonata_type_model', array(
+            ->add('OpsiA', 'text')
+            ->add('OpsiB', 'text')
+            ->add('OpsiC', 'text')
+            ->add('OpsiD', 'text')
+            ->add('OpsiE', 'text')
+            ->add('IdPaketSoal', 'sonata_type_model', array(
                 'class' => 'AppBundle\Entity\TblPaketSoal',
-                'property' => 'nama_paket_soal',
+                'property' => 'idPaketSoal',
             ))
             ->end()
         ;
@@ -43,7 +43,9 @@ class SoalAdmin extends AbstractAdmin
 
     protected function configureListFields(ListMapper $listMapper)
     {
-        $listMapper->addIdentifier('pertanyaan');
+        $listMapper
+            ->addIdentifier('pertanyaan')
+            ->add('jawaban');
     }
 
 }

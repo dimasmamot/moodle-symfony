@@ -192,17 +192,17 @@ class TblUserDetail
     /**
      * @return TblUser
      */
-    public function getIdUserPk()
+    public function getIdRolePk()
     {
-        return $this->idUserPk;
+        return $this->idRolePk;
     }
 
     /**
-     * @param TblUser $idUserPk
+     * @param TblUser $idRolePk
      */
-    public function setIdUserPk($idUserPk)
+    public function setIdRolePk($idRolePk)
     {
-        $this->idUserPk = $idUserPk;
+        $this->idRolePk = $idRolePk;
     }
 
     /**
@@ -215,15 +215,14 @@ class TblUserDetail
     private $idUserDetail;
 
     /**
-     * @var \AppBundle\Entity\TblUser
+     * @var \AppBundle\Entity\TblRole
      *
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\TblUser")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\TblRole")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="ID_USER_PK", referencedColumnName="ID_USER_PK")
+     *   @ORM\JoinColumn(name="ID_ROLE_PK", referencedColumnName="ID_ROLE_PK")
      * })
      */
-    private $idUserPk;
+    private $idRolePk;
 
-
+     
 }
-
