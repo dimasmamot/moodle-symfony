@@ -101,3 +101,10 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, label: Quiz }
         public: true
+
+    admin.kategorifile:
+        class: AppBundle\Admin\KategoriFileAdmin
+        arguments: [~, AppBundle\Entity\TblKategoriFile, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Kategori File }
+        public: true
