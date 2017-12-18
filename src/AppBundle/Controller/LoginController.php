@@ -11,9 +11,9 @@ class LoginController extends Controller
     /**
      * @Route("/login")
      */
-    public function LoginAction(Request $request)
+    public function indexAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('login/login.html.twig', []);
+        return $this->render('login/login.html.twig');
     }
 }
