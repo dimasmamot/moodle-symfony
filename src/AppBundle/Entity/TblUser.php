@@ -137,7 +137,7 @@ class TblUser
      */
     public function setPassword($password)
     {
-        $this->password = $password;
+        $this->password = md5($password);
     }
 
     /**
@@ -194,7 +194,7 @@ class TblUser
      *
      * @ORM\Column(name="FISRT_NAME", type="string", length=200, nullable=true)
      */
-    private $fisrtName;
+    private $firstName;
 
     /**
      * @var string

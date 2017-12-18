@@ -12,5 +12,33 @@
         <join-column name="ID_ROLE_PK" referenced-column-name="ID_ROLE_PK"/>
       </join-columns>
     </many-to-one>
+    <field name="username" type="string" column="username" length="25" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    
+    <field name="password" type="string" column="password" length="64" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="email" type="string" column="email" length="60" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="dateRegistration" type="time" column="date_registration" nullable="false"/>
+    <field name="dateLastLogon" type="time" column="date_last_logon" nullable="false"/>
+    <field name="firstName" type="string" column="first_name" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="lastName" type="string" column="last_name" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
   </entity>
 </doctrine-mapping>
