@@ -37,27 +37,27 @@ services:
         class: AppBundle\Admin\PaketSoalAdmin
         arguments: [~, AppBundle\Entity\TblPaketSoal, ~]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: TblPaketSoal }
+            - { name: sonata.admin, manager_type: orm, label: Paket Soal }
         public: true
 
     admin.tblsoal:
             class: AppBundle\Admin\SoalAdmin
             arguments: [~, AppBundle\Entity\TblSoal, ~]
             tags:
-                - { name: sonata.admin, manager_type: orm, label: TblSoal }
+                - { name: sonata.admin, manager_type: orm, label: Soal }
             public: true
     admin.tbltag:
             class: AppBundle\Admin\TblTagAdmin
             arguments: [~, AppBundle\Entity\TblTag, ~]
             tags:
-                - { name: sonata.admin, manager_type: orm, label: TblTag }
+                - { name: sonata.admin, manager_type: orm, label: Tags }
             public: true
 
     admin.tbltagdetail:
             class: AppBundle\Admin\TblTagDetailAdmin
             arguments: [~, AppBundle\Entity\TblTagDetail, ~]
             tags:
-                - { name: sonata.admin, manager_type: orm, label: TblTagDetail }
+                - { name: sonata.admin, manager_type: orm, label: Tags Detail }
             public: true
 
     admin.user:
@@ -71,5 +71,5 @@ services:
         class: AppBundle\Admin\QuestionCategoryAdmin
         arguments: [~, AppBundle\Entity\TblQuestionCategory, ~]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: QuestionCategory }
+            - { name: sonata.admin, manager_type: orm, label: Question Category }
         public: true
