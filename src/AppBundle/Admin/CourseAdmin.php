@@ -13,22 +13,24 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 
-class UserAdmin extends AbstractAdmin
+class CourseAdmin extends AbstractAdmin
 {
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('id_role_pk', 'sonata_type_model', array(
-                'class' => 'AppBundle\Entity\TblRole',
-                'property' => 'role'
+            ->add('DateCreated', 'date')
+            ->add('CourseName', 'text')
+            ->add('DateStart', 'date')
+            ->add('DateEnd', 'date')
+            ->add('CourseDesc', 'text')
+            ->add('IdUserPk', 'sonata_type_model', array(
+                'class' => 'AppBundle\Entity\TblUser',
+                'property' => 'User'
             ))
-            ->add('dateRegistration', 'text')
-            ->add('dateLastLogon', 'text')
-            ->add('firstName', 'text')
-            ->add('lastName', 'text')
-            ->add('username', 'text')
-            ->add('password', 'text')
-            ->add('email', 'text')
+            ->add('Subject', 'sonata_type_model', array(
+                'class' => 'AppBundle\Entity\TblSubjects',
+                'property' => 'Subject'
+            ))
             /*->add('paket_soal', 'sonata_type_model', array(
                 'class' => 'AppBundle\Entity\paket_soal',
                 'property' => 'namaPaketSoal',
