@@ -73,3 +73,38 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, label: Question Category }
         public: true
+
+    admin.course:
+        class: AppBundle\Admin\CourseAdmin
+        arguments: [~, AppBundle\Entity\TblCourse, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Course }
+        public: true
+
+    admin.subjects:
+        class: AppBundle\Admin\SubjectsAdmin
+        arguments: [~, AppBundle\Entity\TblSubjects, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Subjects }
+        public: true
+
+    admin.lesson:
+        class: AppBundle\Admin\LessonAdmin
+        arguments: [~, AppBundle\Entity\TblLesson, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Lesson }
+        public: true
+
+    admin.quiz:
+        class: AppBundle\Admin\QuizAdmin
+        arguments: [~, AppBundle\Entity\TblQuiz, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Quiz }
+        public: true
+
+    admin.kategorifile:
+        class: AppBundle\Admin\KategoriFileAdmin
+        arguments: [~, AppBundle\Entity\TblKategoriFile, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Kategori File }
+        public: true

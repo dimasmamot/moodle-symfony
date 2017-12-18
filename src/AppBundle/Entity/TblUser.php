@@ -79,17 +79,17 @@ class TblUser
     /**
      * @return string
      */
-    public function getFisrtName()
+    public function getFirstName()
     {
-        return $this->fisrtName;
+        return $this->firstName;
     }
 
     /**
-     * @param string $fisrtName
+     * @param string $firstName
      */
-    public function setFisrtName($fisrtName)
+    public function setFirstName($firstName)
     {
-        $this->fisrtName = $fisrtName;
+        $this->firstName = $firstName;
     }
 
     /**
@@ -192,7 +192,7 @@ class TblUser
     /**
      * @var string
      *
-     * @ORM\Column(name="FISRT_NAME", type="string", length=200, nullable=true)
+     * @ORM\Column(name="FIRST_NAME", type="string", length=200, nullable=true)
      */
     private $firstName;
 
