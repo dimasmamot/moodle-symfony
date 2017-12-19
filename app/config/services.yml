@@ -37,74 +37,74 @@ services:
         class: AppBundle\Admin\PaketSoalAdmin
         arguments: [~, AppBundle\Entity\TblPaketSoal, ~]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Paket Soal }
+            - { name: sonata.admin, manager_type: orm, label: Paket Soal, group: Soal }
         public: true
 
     admin.tblsoal:
             class: AppBundle\Admin\SoalAdmin
             arguments: [~, AppBundle\Entity\TblSoal, ~]
             tags:
-                - { name: sonata.admin, manager_type: orm, label: Soal }
+                - { name: sonata.admin, manager_type: orm, label: Soal, group: Soal }
             public: true
     admin.tbltag:
             class: AppBundle\Admin\TblTagAdmin
             arguments: [~, AppBundle\Entity\TblTag, ~]
             tags:
-                - { name: sonata.admin, manager_type: orm, label: Tags }
+                - { name: sonata.admin, manager_type: orm, label: Tags, group: Forum }
             public: true
 
     admin.tbltagdetail:
             class: AppBundle\Admin\TblTagDetailAdmin
             arguments: [~, AppBundle\Entity\TblTagDetail, ~]
             tags:
-                - { name: sonata.admin, manager_type: orm, label: Tags Detail }
+                - { name: sonata.admin, manager_type: orm, label: Tags Detail, group: Forum }
             public: true
 
     admin.questioncategory:
         class: AppBundle\Admin\QuestionCategoryAdmin
         arguments: [~, AppBundle\Entity\TblQuestionCategory, ~]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Question Category }
+            - { name: sonata.admin, manager_type: orm, label: Question Category, group: Quiz }
         public: true
 
     admin.course:
         class: AppBundle\Admin\CourseAdmin
         arguments: [~, AppBundle\Entity\TblCourse, ~]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Course }
+            - { name: sonata.admin, manager_type: orm, label: Course, group: Kelas }
         public: true
 
     admin.subjects:
         class: AppBundle\Admin\SubjectsAdmin
         arguments: [~, AppBundle\Entity\TblSubjects, ~]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Subjects }
+            - { name: sonata.admin, manager_type: orm, label: Subjects, group: Kelas }
         public: true
 
     admin.lesson:
         class: AppBundle\Admin\LessonAdmin
         arguments: [~, AppBundle\Entity\TblLesson, ~]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Lesson }
+            - { name: sonata.admin, manager_type: orm, label: Lesson, group: Kelas }
         public: true
 
     admin.quiz:
         class: AppBundle\Admin\QuizAdmin
         arguments: [~, AppBundle\Entity\TblQuiz, ~]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Quiz }
+            - { name: sonata.admin, manager_type: orm, label: Quiz, group: Quiz }
         public: true
 
     admin.kategorifile:
         class: AppBundle\Admin\KategoriFileAdmin
         arguments: [~, AppBundle\Entity\TblKategoriFile, ~]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Kategori File }
+            - { name: sonata.admin, manager_type: orm, label: Kategori File, group: File Manager }
         public: true
 
     admin.file:
         class: AppBundle\Admin\FileAdmin
         arguments: [~, AppBundle\Entity\TblFile, ~]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: File }
+            - { name: sonata.admin, manager_type: orm, label: File, group: File Manager }
         public: true
