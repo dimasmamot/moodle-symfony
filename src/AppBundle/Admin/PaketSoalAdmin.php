@@ -24,6 +24,13 @@
 		protected function configureListFields(ListMapper $listMapper){
 			$listMapper->addIdentifier('namaPaketSoal');
 		}
+
+		public function toString($object)
+	    {
+	        return $object instanceof PaketSoal
+	            ? $object->getNamaPaketSoal()
+	            : 'Paket Soal'; // shown in the breadcrumb on the create view
+	    }
 	}
 
 ?>
