@@ -102,3 +102,18 @@ sonata_user:
     class:
         user: Application\Sonata\UserBundle\Entity\User
         group: Application\Sonata\UserBundle\Entity\Group
+
+sonata_admin:
+        dashboard:
+            blocks:
+            # display two dashboard blocks
+                -
+                    position: left
+                    type: sonata.admin.block.admin_list
+                    settings:
+                        groups: [Soal, Quiz, Forum]
+                -
+                    position: right
+                    type: sonata.admin.block.admin_list
+                    settings:
+                        groups: [Kelas, File Manager]
