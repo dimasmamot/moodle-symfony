@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block script %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% endblock %}
+{% block body %}
+<div ="header">
+    <nav class="navbar navbar-default" style="    background-color: #107cba;">
+            <div class="container-fluid">
+                    <div class="navbar-header">
+                      <a class="navbar-brand" href="/" style="color:white;"> ELearning</a>
+                    </div>
+                    <ul class="nav navbar-nav" style="float: right;">
+                            <li ><a href="/login" style="color:white;">You're logged in</a></li>
+                            <li ><a href="/login" style="color:white;">Logout</a></li>
+                    </ul>
+            </div>
+    </nav>
+</div>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-md-4">
+                <img src="/images/user.png" class="img-circle" alt="Cinque Terre" style="width:150px; height: 150px;">
+        </div>
+        <div class="col-md-8">
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+    
+</style>
+{% endblock %}
