@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block script %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% endblock %}
+{% block body %}
+<div ="header">
+    <nav class="navbar navbar-default" style="    background-color: #107cba;">
+            <div class="container-fluid">
+                    <div class="navbar-header">
+                      <a class="navbar-brand" href="/" style="color:white;"> ELearning</a>
+                    </div>
+                    <ul class="nav navbar-nav" style="float: right;">
+                            <li ><a href="/login" style="color:white;">You're logged in</a></li>
+                            <li ><a href="/login" style="color:white;">Logout</a></li>
+                    </ul>
+            </div>
+    </nav>
+</div>
+<div class="wrapper">
+    <div class="row" style="margin-left: 5%;
+    margin-right: 5%;">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <img src="/images/user.png" class="img-circle" alt="Cinque Terre" style="width:40%; height: 40%; margin-left: 30%;
+                    margin-right: 30%;">
+                </div>
+                <div class="label">
+                        <h2> <span class="label label-default">LUTFIYATUL F A</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="label">
+                        <h2> <span class="label label-default">My Courses</span></h2>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="col-md-4">
+                    <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Teknologi Web</span></h2></a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/matkul/Data Mining"><h2> <span class="label label-default">Data Mining</span></h2></a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/matkul/IMK"><h2> <span class="label label-default">IMK </span></h2></a>
+                    </div>
+            </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+    
+</style>
+{% endblock %}
