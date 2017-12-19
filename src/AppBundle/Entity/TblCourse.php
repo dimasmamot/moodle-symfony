@@ -109,7 +109,7 @@ class TblCourse
     }
 
     /**
-     * @return TblUser
+     * @return \Application\Sonata\UserBundle\Entity\User
      */
     public function getIdUserPk()
     {
@@ -117,7 +117,7 @@ class TblCourse
     }
 
     /**
-     * @param TblUser $idUserPk
+     * @param \Application\Sonata\UserBundle\Entity\User $id
      */
     public function setIdUserPk($idUserPk)
     {
@@ -184,11 +184,11 @@ class TblCourse
     private $idCoursePk;
 
     /**
-     * @var \AppBundle\Entity\TblUser
+     * @var \Application\Sonata\UserBundle\Entity\User
      *
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\TblUser")
+     * @ORM\ManyToOne(targetEntity="Application\Sonata\UserBundle\Entity\User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="ID_USER_PK", referencedColumnName="ID_USER_PK")
+     *   @ORM\JoinColumn(name="ID_USER_PK", referencedColumnName="id")
      * })
      */
     private $idUserPk;

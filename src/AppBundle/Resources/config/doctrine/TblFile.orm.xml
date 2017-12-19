@@ -29,9 +29,9 @@
         <join-column name="ID_KATEGORI_FILE" referenced-column-name="ID_KATEGORI_FILE"/>
       </join-columns>
     </many-to-one>
-    <many-to-one field="idUserPk" target-entity="TblUser" fetch="LAZY">
+    <many-to-one field="idUserPk" target-entity="Application\Sonata\UserBundle\Entity\User" fetch="LAZY">
       <join-columns>
-        <join-column name="ID_USER_PK" referenced-column-name="ID_USER_PK"/>
+        <join-column name="ID_USER_PK" referenced-column-name="id"/>
       </join-columns>
     </many-to-one>
   </entity>

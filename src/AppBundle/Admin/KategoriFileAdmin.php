@@ -18,20 +18,28 @@ class KategoriFileAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('NamaKategoriFile', 'text')
+            ->add('namaKategoriFile', 'text')
             ->end()
         ;
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
-        // $datagridMapper->add('idUserPk');
+        $datagridMapper->add('namaKategoriFile');
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-        ->addIdentifier('username');
+            ->add('idKategoriFile')
+            ->addIdentifier('namaKategoriFile');
+    }
+
+    public function toString($object)
+    {
+        return $object instanceof TblKategoriFile
+            ? $object->getNamaKategoriFile()
+            : 'Kategori File'; // shown in the breadcrumb on the create view
     }
 
 }

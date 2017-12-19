@@ -8,6 +8,8 @@
 
 namespace AppBundle\Admin;
 
+use AppBundle\Entity\TblSubjects;
+
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
@@ -19,24 +21,27 @@ class SubjectsAdmin extends AbstractAdmin
     {
         $formMapper
             ->add('SubjectName', 'text')
-            
-            /*->add('paket_soal', 'sonata_type_model', array(
-                'class' => 'AppBundle\Entity\paket_soal',
-                'property' => 'namaPaketSoal',
-            ))*/
             ->end()
         ;
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
-        // $datagridMapper->add('idUserPk');
+        $datagridMapper->add('subjectName');
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-        ->addIdentifier('username');
+            ->add('subjectId')
+            ->addIdentifier('subjectName');
+    }
+
+    public function toString($object)
+    {
+        return $object instanceof TblSubjects
+            ? $object->getSubjectName()
+            : 'Subject Mata Kuliah'; // shown in the breadcrumb on the create view
     }
 
 }
