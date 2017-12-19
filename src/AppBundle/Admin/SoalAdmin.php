@@ -30,7 +30,7 @@ class SoalAdmin extends AbstractAdmin
             ->add('OpsiE', 'text')
             ->add('IdPaketSoal', 'sonata_type_model', array(
                 'class' => 'AppBundle\Entity\TblPaketSoal',
-                'property' => 'idPaketSoal',
+                'property' => 'namaPaketSoal',
             ))
             ->end()
         ;
@@ -38,14 +38,34 @@ class SoalAdmin extends AbstractAdmin
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
-        $datagridMapper->add('pertanyaan');
+        $datagridMapper
+            ->add('pertanyaan')
+            ->add('idPaketSoal', null, array(), 'entity', array(
+                'class' => 'AppBundle\Entity\TblPaketSoal',
+                'choice_label' => 'namaPaketSoal',
+            ))
+        ;
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
             ->addIdentifier('pertanyaan')
-            ->add('jawaban');
+            ->add('OpsiA')
+            ->add('OpsiB')
+            ->add('OpsiC')
+            ->add('OpsiD')
+            ->add('OpsiE')
+            ->add('jawaban')
+            ->add('idPaketSoal.namaPaketSoal')
+        ;
+    }
+
+    public function toString($object)
+    {
+        return $object instanceof TblSoal
+            ? $object->getPertanyaan()
+            : 'Pertanyaan'; // shown in the breadcrumb on the create view
     }
 
 }

@@ -60,13 +60,6 @@ services:
                 - { name: sonata.admin, manager_type: orm, label: TblTagDetail }
             public: true
 
-    admin.user:
-        class: AppBundle\Admin\UserAdmin
-        arguments: [~, AppBundle\Entity\TblUser, ~]
-        tags:
-            - { name: sonata.admin, manager_type: orm, label: User }
-        public: true
-
     admin.questioncategory:
         class: AppBundle\Admin\QuestionCategoryAdmin
         arguments: [~, AppBundle\Entity\TblQuestionCategory, ~]
@@ -107,4 +100,11 @@ services:
         arguments: [~, AppBundle\Entity\TblKategoriFile, ~]
         tags:
             - { name: sonata.admin, manager_type: orm, label: Kategori File }
+        public: true
+
+    admin.file:
+        class: AppBundle\Admin\FileAdmin
+        arguments: [~, AppBundle\Entity\TblFile, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: File }
         public: true
