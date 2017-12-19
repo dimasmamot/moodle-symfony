@@ -29,9 +29,9 @@ class TblUserDetail
     /**
      * @var string
      *
-     * @ORM\Column(name="FISRT_NAME", type="string", length=200, nullable=true)
+     * @ORM\Column(name="FIRST_NAME", type="string", length=200, nullable=true)
      */
-    private $fisrtName;
+    private $firstName;
 
     /**
      * @var string
@@ -96,17 +96,17 @@ class TblUserDetail
     /**
      * @return string
      */
-    public function getFisrtName()
+    public function getFirstName()
     {
-        return $this->fisrtName;
+        return $this->firstName;
     }
 
     /**
      * @param string $fisrtName
      */
-    public function setFisrtName($fisrtName)
+    public function setFirstName($firstName)
     {
-        $this->fisrtName = $fisrtName;
+        $this->firstName = $firstName;
     }
 
     /**

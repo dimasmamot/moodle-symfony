@@ -35,90 +35,16 @@
         <div class="col-md-8">
             <div class="panel panel-default">
                 <div class="label">
-                        <h2> <span class="label label-default">{{ param }}</span></h2>
+                        <h2> <span class="label label-default">{{ tblSubjects.subjectName }}</span></h2>
                 </div>
             </div>
            
+            {% for item in tblCourse%}
             <div class="col-md-3">
-                <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 1</span></h2></a>
-                <p>Web server</p>
-            </div>
-            <div class="col-md-3">
-                <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 2</span></h2></a>
-                <p>JQuery</p>
-            </div>
-            <div class="col-md-3">
-                <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 2</span></h2></a>
-                <p>JQuery</p>
-            </div>
-            <div class="col-md-3">
-                <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 2</span></h2></a>
-                <p>JQuery</p>
-            </div>
-            <div class="col-md-3">
-                    <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 1</span></h2></a>
-                    <p>Web server</p>
+                    <a href="/matkul/Teknologi Web"><h2><span class="label label-default">{{ item.courseName }}</span></h2></a>
+                    <p>{{ item.courseDesc }}</p>
                 </div>
-                <div class="col-md-3">
-                    <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 2</span></h2></a>
-                    <p>JQuery</p>
-                </div>
-                <div class="col-md-3">
-                    <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 2</span></h2></a>
-                    <p>JQuery</p>
-                </div>
-                <div class="col-md-3">
-                    <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 2</span></h2></a>
-                    <p>JQuery</p>
-                </div>
-                <div class="col-md-3">
-                        <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 1</span></h2></a>
-                        <p>Web server</p>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 2</span></h2></a>
-                        <p>JQuery</p>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 2</span></h2></a>
-                        <p>JQuery</p>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 2</span></h2></a>
-                        <p>JQuery</p>
-                    </div>
-                    <div class="col-md-3">
-                            <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 1</span></h2></a>
-                            <p>Web server</p>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 2</span></h2></a>
-                            <p>JQuery</p>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 2</span></h2></a>
-                            <p>JQuery</p>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 2</span></h2></a>
-                            <p>JQuery</p>
-                        </div>
-                        <div class="col-md-3">
-                                <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 1</span></h2></a>
-                                <p>Web server</p>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 2</span></h2></a>
-                                <p>JQuery</p>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 2</span></h2></a>
-                                <p>JQuery</p>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Minggu 2</span></h2></a>
-                                <p>JQuery</p>
-                            </div>
+            {% endfor %}
     </div>
 </div>
 {% endblock %}

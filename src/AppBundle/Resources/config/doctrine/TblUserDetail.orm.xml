@@ -9,7 +9,7 @@
     </id>
     <field name="dateRegistration" type="time" column="DATE_REGISTRATION" nullable="true"/>
     <field name="dateLastLogon" type="time" column="DATE_LAST_LOGON" nullable="true"/>
-    <field name="fisrtName" type="string" column="FISRT_NAME" length="200" nullable="true">
+    <field name="firstName" type="string" column="FIRST_NAME" length="200" nullable="true">
       <options>
         <option name="fixed"/>
       </options>

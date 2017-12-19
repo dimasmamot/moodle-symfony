@@ -39,16 +39,13 @@
                 </div>
             </div>
             <div class="panel panel-default">
+                
+                {% for item in tblSubjects %}
                 <div class="col-md-4">
-                    <a href="/matkul/Teknologi Web"><h2><span class="label label-default">Teknologi Web</span></h2></a>
-                </div>
-                <div class="col-md-4">
-                    <a href="/matkul/Data Mining"><h2> <span class="label label-default">Data Mining</span></h2></a>
-                </div>
-                <div class="col-md-4">
-                    <a href="/matkul/IMK"><h2> <span class="label label-default">IMK </span></h2></a>
+                        <a href="/matkul/{{ item.subjectId }}"><h2><span class="label label-default">{{ item.subjectName }}</span></h2></a>
                     </div>
-            </div>
+                {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock %}
