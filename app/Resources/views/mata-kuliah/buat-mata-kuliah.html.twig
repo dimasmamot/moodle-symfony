@@ -4,8 +4,13 @@
     <div id="wrapper">
         <div id="container">  
         {{ form_start(form) }}
-            {{ form_widget(form.mataKuliah) }}
-            {{ form_widget(form.save, {'attr': {'class': 'glyphicon glyphicon-search'}}) }}         
+            {{ form_row(form.dateCreated) }}
+            {{ form_row(form.courseName) }}
+            {{ form_row(form.dateStart) }}
+            {{ form_row(form.dateEnd) }}
+            {{ form_row(form.courseDesc) }}
+            {{ form_row(form.subject) }}
+            {{ form_row(form.save) }}         
         {{ form_end(form) }}
         </div>
     </div>

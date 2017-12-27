@@ -41,7 +41,7 @@
            
             {% for item in tblCourse%}
             <div class="col-md-3">
-                    <a href="/matkul/Teknologi Web"><h2><span class="label label-default">{{ item.courseName }}</span></h2></a>
+                    <a href="{{ matkul }}/{{ item.idCoursePk }}"><h2><span class="label label-default">{{ item.courseName }}</span></h2></a>
                     <p>{{ item.courseDesc }}</p>
                 </div>
             {% endfor %}

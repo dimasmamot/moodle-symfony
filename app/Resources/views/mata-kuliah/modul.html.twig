@@ -1,0 +1,16 @@
+<div>
+	{% for item in files %}
+		<a href="{{ path('download', {'matkul': matkul, 'modul': modul, 'filename': item}) }}
+"> {{ item }} </a> 
+		<br>
+    {% endfor %}
+
+</div>
+
+
+<div>
+	{{ form_start(form) }}
+            {{ form_row(form.file) }}
+            {{ form_row(form.upload) }}
+        {{ form_end(form) }}
+</div>
