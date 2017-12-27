@@ -1,0 +1,476 @@
+{% extends 'base.html.twig' %}
+
+{% block script %}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+{% endblock %}
+
+{% block body %}
+<body data-spy="scroll" data-target="#quizScrollSpy" data-offset="1">
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+		<a href="#" class="navbar-brand">
+			<img src="img/Logo Vertikal.png" style="height: 32px;">
+		</a>
+		<ul class="navbar-nav">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Beranda</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a href="#" class="nav-link dropdown-toggle" id="navSubject" data-toggle="dropdown">
+					Subject
+				</a>
+				<div class="dropdown-menu">
+					<a href="#" class="dropdown-item">Subject 1</a>
+					<a href="#" class="dropdown-item">Subject 2</a>
+					<a href="#" class="dropdown-item">Subject 3</a>
+					<a href="#" class="dropdown-item">Subject 4</a>
+					<a href="#" class="dropdown-item">Subject 5</a>
+				</div>
+			</li>
+		</ul>
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item dropdown">
+				<a href="#" class="nav-link dropdown-toggle" id="navSubject" data-toggle="dropdown">
+					Akun
+				</a>
+				<div class="dropdown-menu">
+					<a href="#" class="dropdown-item">Profil</a>
+					<a href="#" class="dropdown-item">Log Out</a>
+				</div>
+			</li>
+		</ul>
+	</nav>
+	<div class="fluid-container">
+		<div id="section1 p-5">
+			<div class="row">
+				<nav class="col-md-2 p-4 position-static bg-light navbar-light" id="quizScrollSpy">
+					<ul class="nav nav-pills flex-column sticky-top">
+						<li class="nav-item">
+							<a class="nav-link active" href="#quiz1">Soal #1</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#quiz2">Soal #2</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#quiz3">Soal #3</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#quiz4">Soal #4</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#quiz5">Soal #5</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#quiz6">Soal #6</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#quiz7">Soal #7</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#quiz8">Soal #8</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#quiz9">Soal #9</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#quiz10">Soal #10</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="col-md-10 p-4">
+					<div class="card mb-3" id="quiz1">
+						<div class="card-header">
+							Soal #1
+						</div>
+						<div class="card-body">
+							<h4 class="card-title">Manakah di bawah ini merupakan hal yang benar dan baik ? </h4>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio1" id="jawaban1" value="A">
+							    Menabung setiap hari dan menyedekahkan sebagian dari tabungannya
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio1" id="jawaban2" value="B">
+							    Membantu teman melakukan sesuatu yang sulit dilakukan
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio1" id="jawaban3" value="C">
+							    Melakukan hacking pada server untuk mendapatkan kunci jawaban soal yang dibutuhkan oleh orang lain
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio1" id="jawaban4" value="D">
+							    Mengunduh paper gratis dengan tanpa dosa melalui website non profit dengan tujuan belajar
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio1" id="jawaban5" value="E">
+							    Menggandakan smart card dengan tujuan agar bisa titip absen
+							  </label>
+							</div>
+						</div>
+					</div>
+					<div class="card mb-3" id="quiz2">
+						<div class="card-header">
+							Soal #2
+						</div>
+						<div class="card-body">
+							<h4 class="card-title">Manakah di bawah ini merupakan hal yang benar dan baik ? </h4>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio2" id="jawaban1" value="A">
+							    Menabung setiap hari dan menyedekahkan sebagian dari tabungannya
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio2" id="jawaban2" value="B">
+							    Membantu teman melakukan sesuatu yang sulit dilakukan
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio2" id="jawaban3" value="C">
+							    Melakukan hacking pada server untuk mendapatkan kunci jawaban soal yang dibutuhkan oleh orang lain
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio2" id="jawaban4" value="D">
+							    Mengunduh paper gratis dengan tanpa dosa melalui website non profit dengan tujuan belajar
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio2" id="jawaban5" value="E">
+							    Menggandakan smart card dengan tujuan agar bisa titip absen
+							  </label>
+							</div>
+						</div>
+					</div>
+					<div class="card mb-3" id="quiz3">
+						<div class="card-header">
+							Soal #3
+						</div>
+						<div class="card-body">
+							<h4 class="card-title">Manakah di bawah ini merupakan hal yang benar dan baik ? </h4>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio3" id="jawaban1" value="A">
+							    Menabung setiap hari dan menyedekahkan sebagian dari tabungannya
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio3" id="jawaban2" value="B">
+							    Membantu teman melakukan sesuatu yang sulit dilakukan
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio3" id="jawaban3" value="C">
+							    Melakukan hacking pada server untuk mendapatkan kunci jawaban soal yang dibutuhkan oleh orang lain
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio3" id="jawaban4" value="D">
+							    Mengunduh paper gratis dengan tanpa dosa melalui website non profit dengan tujuan belajar
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio3" id="jawaban5" value="E">
+							    Menggandakan smart card dengan tujuan agar bisa titip absen
+							  </label>
+							</div>
+						</div>
+					</div>
+					<div class="card mb-3" id="quiz4">
+						<div class="card-header">
+							Soal #4
+						</div>
+						<div class="card-body">
+							<h4 class="card-title">Manakah di bawah ini merupakan hal yang benar dan baik ? </h4>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio4" id="jawaban1" value="A">
+							    Menabung setiap hari dan menyedekahkan sebagian dari tabungannya
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio4" id="jawaban2" value="B">
+							    Membantu teman melakukan sesuatu yang sulit dilakukan
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio4" id="jawaban3" value="C">
+							    Melakukan hacking pada server untuk mendapatkan kunci jawaban soal yang dibutuhkan oleh orang lain
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio4" id="jawaban4" value="D">
+							    Mengunduh paper gratis dengan tanpa dosa melalui website non profit dengan tujuan belajar
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio4" id="jawaban5" value="E">
+							    Menggandakan smart card dengan tujuan agar bisa titip absen
+							  </label>
+							</div>
+						</div>
+					</div>
+					<div class="card mb-3" id="quiz5">
+						<div class="card-header">
+							Soal #5
+						</div>
+						<div class="card-body">
+							<h4 class="card-title">Manakah di bawah ini merupakan hal yang benar dan baik ? </h4>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio5" id="jawaban1" value="A">
+							    Menabung setiap hari dan menyedekahkan sebagian dari tabungannya
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio5" id="jawaban2" value="B">
+							    Membantu teman melakukan sesuatu yang sulit dilakukan
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio5" id="jawaban3" value="C">
+							    Melakukan hacking pada server untuk mendapatkan kunci jawaban soal yang dibutuhkan oleh orang lain
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio5" id="jawaban4" value="D">
+							    Mengunduh paper gratis dengan tanpa dosa melalui website non profit dengan tujuan belajar
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio5" id="jawaban5" value="E">
+							    Menggandakan smart card dengan tujuan agar bisa titip absen
+							  </label>
+							</div>
+						</div>
+					</div>
+					<div class="card mb-3" id="quiz6">
+						<div class="card-header">
+							Soal #6
+						</div>
+						<div class="card-body">
+							<h4 class="card-title">Manakah di bawah ini merupakan hal yang benar dan baik ? </h4>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio6" id="jawaban1" value="A">
+							    Menabung setiap hari dan menyedekahkan sebagian dari tabungannya
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio6" id="jawaban2" value="B">
+							    Membantu teman melakukan sesuatu yang sulit dilakukan
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio6" id="jawaban3" value="C">
+							    Melakukan hacking pada server untuk mendapatkan kunci jawaban soal yang dibutuhkan oleh orang lain
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio6" id="jawaban4" value="D">
+							    Mengunduh paper gratis dengan tanpa dosa melalui website non profit dengan tujuan belajar
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio6" id="jawaban5" value="E">
+							    Menggandakan smart card dengan tujuan agar bisa titip absen
+							  </label>
+							</div>
+						</div>
+					</div>
+					<div class="card mb-3" id="quiz7">
+						<div class="card-header">
+							Soal #7
+						</div>
+						<div class="card-body">
+							<h4 class="card-title">Manakah di bawah ini merupakan hal yang benar dan baik ? </h4>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio7" id="jawaban1" value="A">
+							    Menabung setiap hari dan menyedekahkan sebagian dari tabungannya
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio7" id="jawaban2" value="B">
+							    Membantu teman melakukan sesuatu yang sulit dilakukan
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio7" id="jawaban3" value="C">
+							    Melakukan hacking pada server untuk mendapatkan kunci jawaban soal yang dibutuhkan oleh orang lain
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio7" id="jawaban4" value="D">
+							    Mengunduh paper gratis dengan tanpa dosa melalui website non profit dengan tujuan belajar
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio7" id="jawaban5" value="E">
+							    Menggandakan smart card dengan tujuan agar bisa titip absen
+							  </label>
+							</div>
+						</div>
+					</div>
+					<div class="card mb-3" id="quiz8">
+						<div class="card-header">
+							Soal #8
+						</div>
+						<div class="card-body">
+							<h4 class="card-title">Manakah di bawah ini merupakan hal yang benar dan baik ? </h4>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio8" id="jawaban1" value="A">
+							    Menabung setiap hari dan menyedekahkan sebagian dari tabungannya
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio8" id="jawaban2" value="B">
+							    Membantu teman melakukan sesuatu yang sulit dilakukan
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio8" id="jawaban3" value="C">
+							    Melakukan hacking pada server untuk mendapatkan kunci jawaban soal yang dibutuhkan oleh orang lain
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio8" id="jawaban4" value="D">
+							    Mengunduh paper gratis dengan tanpa dosa melalui website non profit dengan tujuan belajar
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio8" id="jawaban5" value="E">
+							    Menggandakan smart card dengan tujuan agar bisa titip absen
+							  </label>
+							</div>
+						</div>
+					</div>
+					<div class="card mb-3" id="quiz9">
+						<div class="card-header">
+							Soal #9
+						</div>
+						<div class="card-body">
+							<h4 class="card-title">Manakah di bawah ini merupakan hal yang benar dan baik ? </h4>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio9" id="jawaban1" value="A">
+							    Menabung setiap hari dan menyedekahkan sebagian dari tabungannya
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio9" id="jawaban2" value="B">
+							    Membantu teman melakukan sesuatu yang sulit dilakukan
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio9" id="jawaban3" value="C">
+							    Melakukan hacking pada server untuk mendapatkan kunci jawaban soal yang dibutuhkan oleh orang lain
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio9" id="jawaban4" value="D">
+							    Mengunduh paper gratis dengan tanpa dosa melalui website non profit dengan tujuan belajar
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio9" id="jawaban5" value="E">
+							    Menggandakan smart card dengan tujuan agar bisa titip absen
+							  </label>
+							</div>
+						</div>
+					</div>
+					<div class="card mb-3" id="quiz10">
+						<div class="card-header">
+							Soal #10
+						</div>
+						<div class="card-body">
+							<h4 class="card-title">Manakah di bawah ini merupakan hal yang benar dan baik ? </h4>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio10" id="jawaban1" value="A">
+							    Menabung setiap hari dan menyedekahkan sebagian dari tabungannya
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio10" id="jawaban2" value="B">
+							    Membantu teman melakukan sesuatu yang sulit dilakukan
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio10" id="jawaban3" value="C">
+							    Melakukan hacking pada server untuk mendapatkan kunci jawaban soal yang dibutuhkan oleh orang lain
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio10" id="jawaban4" value="D">
+							    Mengunduh paper gratis dengan tanpa dosa melalui website non profit dengan tujuan belajar
+							  </label>
+							</div>
+							<div class="form-check">
+							  <label class="form-check-label">
+							    <input class="form-check-input" type="radio" name="radio10" id="jawaban5" value="E">
+							    Menggandakan smart card dengan tujuan agar bisa titip absen
+							  </label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 pl-5 pr-5 pb-5">
+					<button class="btn btn-primary btn-block btn-lg">Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+{% endblock %}
