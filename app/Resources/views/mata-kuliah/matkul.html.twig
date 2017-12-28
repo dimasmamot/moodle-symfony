@@ -1,57 +1,78 @@
 {% extends 'base.html.twig' %}
 
-{% block script %}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-{% endblock %}
+
 {% block body %}
-<div ="header">
-    <nav class="navbar navbar-default" style="    background-color: #107cba;">
-            <div class="container-fluid">
-                    <div class="navbar-header">
-                      <a class="navbar-brand" href="/" style="color:white;"> ELearning</a>
-                    </div>
-                    <ul class="nav navbar-nav" style="float: right;">
-                            <li ><a href="/login" style="color:white;">You're logged in</a></li>
-                            <li ><a href="/login" style="color:white;">Logout</a></li>
-                    </ul>
-            </div>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">
+            <img src="{{asset('img/Logo Vertikal.png')}}" style="height: 32px;">
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Beranda</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navSubject" data-toggle="dropdown">
+                    Subject
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Subject 1</a>
+                    <a href="#" class="dropdown-item">Subject 2</a>
+                    <a href="#" class="dropdown-item">Subject 3</a>
+                    <a href="#" class="dropdown-item">Subject 4</a>
+                    <a href="#" class="dropdown-item">Subject 5</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navSubject" data-toggle="dropdown">
+                    Akun
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Profil</a>
+                    <a href="#" class="dropdown-item">Log Out</a>
+                </div>
+            </li>
+        </ul>
     </nav>
-</div>
-<div class="wrapper">
-    <div class="row" style="margin-left: 5%;
-    margin-right: 5%;">
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <img src="/images/user.png" class="img-circle" alt="Cinque Terre" style="width:40%; height: 40%; margin-left: 30%;
-                    margin-right: 30%;">
+    <div class="fluid-container">
+        <div id="section1 p-5">
+            <div class="row">
+                <div class="col-md-2 p-4"></div>
+                <div class="col-md-8 p-4">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <h3 class="mb-2">{{ tblSubjects.subjectName }} <small>Nama Kategori</small>
+                                <button type="button" class="btn btn-success btn-sm float-right">
+                                    <span class="oi oi-plus" title="plus" aria-hidden="true"></span> Tambah
+                                </button>
+                            </h3>
+                        </div>
+                        <div class="card-body p-5">
+                            <div class="row">
+                                <div class="card-columns">
+                                    {% for item in tblCourse%}
+
+                                    <div class="card">
+                                        <img src="{{asset('img/card.png')}}" class="card-img-top">
+                                        
+                                        <div class="card-body">
+                                            <h4 class="card-title">{{ item.courseName }}</h4>
+                                            <p class="card-text">
+                                                {{ item.courseDesc }}
+                                            </p>
+                                            <a href="{{ matkul }}/{{ item.idCoursePk }}" class="btn btn-primary">Lihat Modul</a>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
                 </div>
-                <div class="label">
-                        <h2> <span class="label label-default">LUTFIYATUL F A</span></h2>
-                </div>
+                <div class="col-md-2 p-4"></div>
             </div>
         </div>
-        <div class="col-md-8">
-            <div class="panel panel-default">
-                <div class="label">
-                        <h2> <span class="label label-default">{{ tblSubjects.subjectName }}</span></h2>
-                </div>
-            </div>
-           
-            {% for item in tblCourse%}
-            <div class="col-md-3">
-                    <a href="{{ matkul }}/{{ item.idCoursePk }}"><h2><span class="label label-default">{{ item.courseName }}</span></h2></a>
-                    <p>{{ item.courseDesc }}</p>
-                </div>
-            {% endfor %}
     </div>
-</div>
 {% endblock %}
 
-{% block stylesheets %}
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<style>
-    
-</style>
-{% endblock %}
