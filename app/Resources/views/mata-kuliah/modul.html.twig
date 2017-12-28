@@ -56,7 +56,7 @@
 					</ul>
 				</nav>
 				<div class="col-md-10 p-4">
-					<h3>{{ modul }} <small>{{ matkul }}</small></h3>
+					<h3>{{ tblCourse.courseName }} <small>{{ tblSubjects.subjectName }}</small></h3>
 					<div class="card mb-3" id="modul">
 						<div class="card-header">
 							<h5 class="mb-2">Modul
@@ -97,13 +97,16 @@
 								<div class="card-columns">
 									<div class="card">
 										<img src="{{asset('img/quiz.png')}}" class="card-img-top" alt="quiz1">
+										{% for item in tblQuiz %}
 										<div class="card-body">
-											<h4 class="card-title">Quiz 1</h4>
+											<h4 class="card-title">{{item.namaQuiz}}</h4>
 											<p class="card-text">
-												Lorem Ipsum is simply dummy text of the printi typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev
+												Try Attempt : {{item.tryAttempt}} <br>
+												Durasi      : {{item.durasiQuiz}}
 											</p>
 											<a href="#" class="btn btn-primary">Kerjakan Quiz</a>
 										</div>
+										{%endfor%}
 									</div>
 								</div>
 							</div>
@@ -120,26 +123,19 @@
 						<div class="card-body p-5">
 							<div class="row">
 								<div class="card-columns">
+									{% for item in tblAssignment %}
 									<div class="card">
 										<img src="{{asset('img/Assignment.png')}}" class="card-img-top" alt="assignment1">
 										<div class="card-body">
-											<h4 class="card-title">Assignment 1</h4>
+											<h4 class="card-title">{{item.namaAssignment}}</h4>
 											<p class="card-text">
-												Lorem Ipsum is simply dummy text of the printi typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev
+												mulai    : {{item.startDate|date('d-m-Y')}} <br>
+												deadline : {{item.dueDate|date('d-m-Y')}}
 											</p>
 											<a href="#" class="btn btn-primary">Upload File</a>
 										</div>
 									</div>
-									<div class="card">
-										<img src="{{asset('img/Assignment.png')}}" class="card-img-top" alt="assignment2">
-										<div class="card-body">
-											<h4 class="card-title">Assignment 2</h4>
-											<p class="card-text">
-												Lorem Ipsum isly dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev
-											</p>
-											<a href="#" class="btn btn-primary">Upload File</a>
-										</div>
-									</div>
+									{% endfor %}
 								</div>
 							</div>
 						</div>
@@ -157,17 +153,15 @@
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<div class="modal-body">
-						
-					<input type="file" name="filePath" id="filePath" class="custom-file-input">
 					{{ form_start(form) }}
 						<div class="form-group">
 							<label class="custom-file">
-					            {{ form_row(form.file) }}
+								{{ form_row(form.file) }}
 								<span class="custom-file-control"></span>
 							</label>
-		            		{{ form_row(form.upload, {'attr': {'class': 'btn btn-primary'}}) }}
+							{{ form_row(form.upload, {'attr': {'class': 'btn btn-primary'}}) }}
 						</div>
-		        	{{ form_end(form) }}
+					{{ form_end(form) }}
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -184,31 +178,23 @@
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<div class="modal-body">
-					<form>
+					{{ form_start(form2) }}
 						<div class="form-group">
-						    <label for="namaQuiz">Nama Quiz</label>
-						    <input type="text" class="form-control" id="namaQuiz" placeholder="Nama Quiz" name="namaQuiz">
+							{{ form_row(form2.namaQuiz, {'attr': {'class':'form-control', 'placeholder': 'Nama Quiz'}}) }}
 						</div>
 						<div class="form-group">
-							<label for="paketSoal">Paket Soal</label>
-							<select class="form-control" id="paketSoal">
-								<option>UAS Teknologi Web</option>
-								<option>Post Test AJAX</option>
-								<option>UTS Node JS</option>
-								<option>Quiz Web Service</option>
-							</select>
+							{{ form_row(form2.idPaketSoal, {'attr': {'class':'form-control'}}) }}
 						</div>
 						<div class="form-group">
-						    <label for="quizAttempt">Quiz Attempt</label>
-						    <input type="number" class="form-control" id="quizAttempt" placeholder="Attempt" name="namaQuiz">
+							{{ form_row(form2.tryAttempt, {'attr': {'class':'form-control', 'placeholder': 'Attempt'}}) }}
 						</div>
 						<div class="form-group">
-						    <label for="quizDuration">Durasi Quiz</label>
-						    <input type="number" class="form-control" id="quizDuration" placeholder="Durasi" name="quizDuration">
+							{{ form_row(form2.durasiQuiz, {'attr': {'class':'form-control', 'placeholder': 'Durasi'}}) }}
 						</div>
+						{{ form_row(form2.tambah, {'attr': {'class':'btn btn-primary'}}) }}
 
-						<button type="submit" class="btn btn-primary">Submit</button>
-					</form>
+					{{ form_end(form2) }}
+
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -225,18 +211,15 @@
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<div class="modal-body">
-					<form>
+					{{ form_start(form3) }}
 						<div class="form-group">
-						    <label for="namaAssignment">Nama Assignment</label>
-						    <input type="text" class="form-control" id="namaAssignment" placeholder="Nama Assignment" name="namaAssignment">
+							{{form_row(form3.namaAssignment, {'attr': {'class': 'form-control', 'placeholder': 'Nama Assignment'}})}}
 						</div>
 						<div class="form-group">
-						    <label for="dueDate">Due Date</label>
-						    <input id="dueDate" name="dueDate" class="clsDatePicker">
+							{{form_row(form3.dueDate, {'attr': {'class': 'form-control', 'placeholder': 'due date'}})}}
 						</div>
-
-						<button type="submit" class="btn btn-primary">Submit</button>
-					</form>
+						{{form_row(form3.tambah, {'attr': {'class': 'btn btn-primary'}})}}
+					{{ form_end(form3)}}
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
