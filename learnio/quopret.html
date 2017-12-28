@@ -5,14 +5,220 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="open-iconic/font/css/open-iconic-bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+		<a href="#" class="navbar-brand">
+			<img src="img/Logo Vertikal Answer.png" style="height: 32px;">
+		</a>
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Beranda</a>
+			</li>
+		</ul>
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Login</a>
+			</li>
+			&nbsp;
+			<li class="nav-item active">
+				<a class="nav-link btn btn-primary btn-sm" href="#"><span class="oi oi-plus"></span> Tanyakan Pertanyaan</a>
+			</li>
+		</ul>
+	</nav>
 	<div class="fluid-container">
 		<div class="row">
-			<div class="col-md-">
+			<div class="col-md-10 p-5">
+				<div class="card mb-3">
+					<div class="card-body p-4">
+						<div class="row">
+							<div class="col-md-12">
+								<h4>Judul pertanyaan<small>(Kategori Pertanyaan)</small></h4>								
+							</div>
+						</div>
+						<hr>
+						<div class="row">
+							<div class="col-md-12">
+								<blockquote class="blockquote">
+									<p>Lorem ipsu ini merupakan penjabaran pertanyaan atau lebih dari yang disebut detail atau deskripsi pertanyaan yang merupakan penjelasan dari pertanyaan yang ada di atas ini, dikemas dengan bahasa yang singkat dan padat dan awawawawa</p>
+									<footer class="blockquote-footer">Username Penanya Pertanyaan</footer>
+								</blockquote>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<a href="#" class="badge badge-primary">Teknologi Web</a>&nbsp;
+								<a href="#" class="badge badge-danger">AJAX</a>&nbsp;
+								<a href="#" class="badge badge-warning">Jquery</a>
+							</div>
+							<div class="col-md-4"></div>
+							<div class="col-md-2"></div>
+							<div class="col-md-2">
+								<button class="btn btn-primary" data-toggle="collapse" data-target="#answerBox">Jawab Pertanyaan</button>
+							</div>
+						</div>
+						<hr>
+						<div class="row collapse" id="answerBox">
+							<div class="col-md-12">
+								<form>
+									<div class="form-group">
+										<label for="textJawaban">Jawaban : </label>
+										<textarea class="form-control" id="textJawaban" rows="4" name="textJawaban"></textarea>
+									</div>
+									<button type="submit" class="btn btn-primary float-right">Jawab</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card mb-3 p-4">
+							<div class="card-header">
+								<div class="row">
+									<div class="col-md-1">
+										<img src="img/logo.png" class="rounded-circle" style="width: 90%">
+									</div>
+									<div class="col-md-6 pt-1">
+										<h5>Nama Orang Yang Jawab
+											<br><small>Usernamenya</small>
+										</h5>
+									</div>
+								</div>								
+							</div>
+							<div class="card-body">
+								<div class="row">
+									<div class="col-md-10">
+										<p class="text-justify">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia ante eu nisi vestibulum luctus. Aliquam mollis, velit vel viverra lobortis, erat arcu hendrerit ipsum, ac porta massa erat in diam. Aliquam erat volutpat. Vestibulum et elit tellus. Cras libero neque, fringilla sit amet semper condimentum, molestie ut ligula. Curabitur in risus nec tellus accumsan lacinia vitae vel risus. Fusce viverra vel lacus quis viverra. Etiam id nisi ex. Nulla ante sapien, tempus sit amet tincidunt ut, commodo ut purus. Nunc suscipit vel justo ut mattis. Proin enim nunc, aliquam egestas libero eu, laoreet convallis diam. Sed at mi non nisi posuere viverra non eget risus. Pellentesque pharetra viverra volutpat.
+
+											Suspendisse sagittis dui non molestie porta. Donec bibendum orci mi, et blandit risus consectetur at. Phasellus ut sagittis ipsum. Nulla facilisi. Maecenas at ullamcorper tellus. Morbi auctor ultrices aliquam. Aliquam ornare, neque a imperdiet semper, nibh ligula dapibus lectus, sit amet cursus velit felis at leo. Aenean sed ante nunc. Nullam ex ante, commodo et leo ultrices, commodo rutrum nisi.
+										</p>
+									</div>
+									<div clas="col-md-2 mx-auto" style="width: 16%">
+										<div class="row">
+											<br><br>
+											<br>
+										</div>
+										<div class="row text-center">
+											<div class="col-md-12">
+												<a href="#" class="oi oi-chevron-top"></a>
+											</div>
+										</div>
+										<div class="row text-center">
+											<div class="col-md-12">
+												<h4>0</h4>
+											</div>
+										</div>
+										<div class="row text-center">
+											<div class="col-md-12">
+												<a href="#" class="oi oi-chevron-bottom"></a>
+											</div>
+										</div>
+									</div>
+								</div>								
+							</div>
+						</div>
+						<div class="card mb-3 p-4">
+							<div class="card-header">
+								<div class="row">
+									<div class="col-md-1">
+										<img src="img/logo.png" class="rounded-circle" style="width: 90%">
+									</div>
+									<div class="col-md-6 pt-1">
+										<h5>Nama Orang Yang Jawab
+											<br><small>Usernamenya</small>
+										</h5>
+									</div>
+								</div>								
+							</div>
+							<div class="card-body">
+								<div class="row">
+									<div class="col-md-10">
+										<p class="text-justify">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia ante eu nisi vestibulum luctus. Aliquam mollis, velit vel viverra lobortis, erat arcu hendrerit ipsum, ac porta massa erat in diam. Aliquam erat volutpat. Vestibulum et elit tellus. Cras libero neque, fringilla sit amet semper condimentum, molestie ut ligula. Curabitur in risus nec tellus accumsan lacinia vitae vel risus. Fusce viverra vel lacus quis viverra. Etiam id nisi ex. Nulla ante sapien, tempus sit amet tincidunt ut, commodo ut purus. Nunc suscipit vel justo ut mattis. Proin enim nunc, aliquam egestas libero eu, laoreet convallis diam. Sed at mi non nisi posuere viverra non eget risus. Pellentesque pharetra viverra volutpat.
+
+											Suspendisse sagittis dui non molestie porta. Donec bibendum orci mi, et blandit risus consectetur at. Phasellus ut sagittis ipsum. Nulla facilisi. Maecenas at ullamcorper tellus. Morbi auctor ultrices aliquam. Aliquam ornare, neque a imperdiet semper, nibh ligula dapibus lectus, sit amet cursus velit felis at leo. Aenean sed ante nunc. Nullam ex ante, commodo et leo ultrices, commodo rutrum nisi.
+										</p>
+									</div>
+									<div clas="col-md-2 mx-auto" style="width: 16%">
+										<div class="row">
+											<br><br>
+											<br>
+										</div>
+										<div class="row text-center">
+											<div class="col-md-12">
+												<a href="#" class="oi oi-chevron-top"></a>
+											</div>
+										</div>
+										<div class="row text-center">
+											<div class="col-md-12">
+												<h4>0</h4>
+											</div>
+										</div>
+										<div class="row text-center">
+											<div class="col-md-12">
+												<a href="#" class="oi oi-chevron-bottom"></a>
+											</div>
+										</div>
+									</div>
+								</div>								
+							</div>
+						</div>
+						<div class="card mb-3 p-4">
+							<div class="card-header">
+								<div class="row">
+									<div class="col-md-1">
+										<img src="img/logo.png" class="rounded-circle" style="width: 90%">
+									</div>
+									<div class="col-md-6 pt-1">
+										<h5>Nama Orang Yang Jawab
+											<br><small>Usernamenya</small>
+										</h5>
+									</div>
+								</div>								
+							</div>
+							<div class="card-body">
+								<div class="row">
+									<div class="col-md-10">
+										<p class="text-justify">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia ante eu nisi vestibulum luctus. Aliquam mollis, velit vel viverra lobortis, erat arcu hendrerit ipsum, ac porta massa erat in diam. Aliquam erat volutpat. Vestibulum et elit tellus. Cras libero neque, fringilla sit amet semper condimentum, molestie ut ligula. Curabitur in risus nec tellus accumsan lacinia vitae vel risus. Fusce viverra vel lacus quis viverra. Etiam id nisi ex. Nulla ante sapien, tempus sit amet tincidunt ut, commodo ut purus. Nunc suscipit vel justo ut mattis. Proin enim nunc, aliquam egestas libero eu, laoreet convallis diam. Sed at mi non nisi posuere viverra non eget risus. Pellentesque pharetra viverra volutpat.
+
+											Suspendisse sagittis dui non molestie porta. Donec bibendum orci mi, et blandit risus consectetur at. Phasellus ut sagittis ipsum. Nulla facilisi. Maecenas at ullamcorper tellus. Morbi auctor ultrices aliquam. Aliquam ornare, neque a imperdiet semper, nibh ligula dapibus lectus, sit amet cursus velit felis at leo. Aenean sed ante nunc. Nullam ex ante, commodo et leo ultrices, commodo rutrum nisi.
+										</p>
+									</div>
+									<div clas="col-md-2 mx-auto" style="width: 16%">
+										<div class="row">
+											<br><br>
+											<br>
+										</div>
+										<div class="row text-center">
+											<div class="col-md-12">
+												<a href="#" class="oi oi-chevron-top"></a>
+											</div>
+										</div>
+										<div class="row text-center">
+											<div class="col-md-12">
+												<h4>0</h4>
+											</div>
+										</div>
+										<div class="row text-center">
+											<div class="col-md-12">
+												<a href="#" class="oi oi-chevron-bottom"></a>
+											</div>
+										</div>
+									</div>
+								</div>								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2 p-4">
 				
 			</div>
 		</div>
