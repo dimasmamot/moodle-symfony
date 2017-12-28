@@ -1,0 +1,129 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">
+            <img src="{{asset('img/Logo Vertikal.png')}}" style="height: 32px;">
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Beranda</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navSubject" data-toggle="dropdown">
+                    Subject
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Subject 1</a>
+                    <a href="#" class="dropdown-item">Subject 2</a>
+                    <a href="#" class="dropdown-item">Subject 3</a>
+                    <a href="#" class="dropdown-item">Subject 4</a>
+                    <a href="#" class="dropdown-item">Subject 5</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navSubject" data-toggle="dropdown">
+                    Akun
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Profil</a>
+                    <a href="#" class="dropdown-item">Log Out</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="fluid-container">
+        <div id="section1 p-5">
+            <div class="row">
+               <!--  <nav class="col-md-2 p-4 position-static bg-light navbar-light" id="quizScrollSpy">
+                    <ul class="nav nav-pills flex-column sticky-top">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#quiz1">Soal #1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#quiz2">Soal #2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#quiz3">Soal #3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#quiz4">Soal #4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#quiz5">Soal #5</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#quiz6">Soal #6</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#quiz7">Soal #7</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#quiz8">Soal #8</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#quiz9">Soal #9</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#quiz10">Soal #10</a>
+                        </li>
+                    </ul>
+                </nav> -->
+                <div class="col-md-10 p-4">
+                {%for item in tblSoal%}
+                    <div class="card mb-3" id="quiz1">
+                        <div class="card-header">
+                            Soal 
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">{{item.pertanyaan}} </h4>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <!-- <input class="form-check-input" type="radio" name="radio1" id="jawaban1" value="A"> -->
+                                {{item.opsiA}}
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <!-- <input class="form-check-input" type="radio" name="radio1" id="jawaban2" value="B"> -->
+                                {{item.opsiB}}
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <!-- <input class="form-check-input" type="radio" name="radio1" id="jawaban3" value="C"> -->
+                                {{item.opsiC}}
+                                
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <!-- <input class="form-check-input" type="radio" name="radio1" id="jawaban4" value="D"> -->
+                                {{item.opsiD}}
+                                
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <!-- <input class="form-check-input" type="radio" name="radio1" id="jawaban5" value="E"> -->
+                                {{item.opsiE}}
+                                
+                              </label>
+                            </div>
+                        </div>
+                    </div>
+                {%endfor%}    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 pl-5 pr-5 pb-5">
+                    <button class="btn btn-primary btn-block btn-lg">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
