@@ -9,6 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 use Doctrine\ORM\EntityManagerInterface;
 
+use AppBundle\Entity\TblSoal;
 use AppBundle\Entity\TblAssignment;
 use AppBundle\Entity\TblQuiz;
 use AppBundle\Entity\TblSubjects;
@@ -169,4 +170,16 @@ class MatkulController extends Controller
 
         return $this->file($file);
     }
+
+    /**
+     * @Route("/kerjakan-quiz/{quiz}", name="kerjakan-quiz")
+     */
+    public function kerjakanQuizAction($quiz)
+    {
+        $repositoriTblSoal = $this->getDoctrine()->getRepository(TblSoal::class);
+        $tblSoal = $repositoriTblSoal->findBy(['idPaketSoal' => $quiz]);
+
+
+        return $this->render('mata-kuliah/kerjakan-quiz.html.twig', ['tblSoal' => $tblSoal]);
+    }    
 }
