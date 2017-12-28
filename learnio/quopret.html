@@ -26,7 +26,7 @@
 			</li>
 			&nbsp;
 			<li class="nav-item active">
-				<a class="nav-link btn btn-primary btn-sm" href="#"><span class="oi oi-plus"></span> Tanyakan Pertanyaan</a>
+				<a class="nav-link btn btn-primary btn-sm" data-toggle="modal" data-target="#modalTanya"><span class="oi oi-plus"></span> Tanyakan Pertanyaan</a>
 			</li>
 		</ul>
 	</nav>
@@ -220,6 +220,42 @@
 			</div>
 			<div class="col-md-2 p-4">
 				
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalTanya">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Tanyakan Pertanyaanmuc</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+						    <label for="pertanyaan">Pertanyaan</label>
+						    <input type="text" class="form-control" id="pertanyaan" placeholder="Pertanyaan" name="pertanyaan">
+						</div>
+						<div class="form-group">
+							<label for="deskripsiPertanyaan">Deskripsi Pertanyaan</label>
+							<textarea class="form-control" id="deskripsiPertanyaan" rows="3" name="deskripsiPertanyaan"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="kategoriPertanyaan">Kategori</label>
+							<select class="form-control" id="kategoriPertanyaan">
+								<option>UAS Teknologi Web</option>
+								<option>Post Test AJAX</option>
+								<option>UTS Node JS</option>
+								<option>Quiz Web Service</option>
+							</select>
+						</div>
+						<button type="submit" class="btn btn-primary">Tanyakan</button>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
 			</div>
 		</div>
 	</div>
